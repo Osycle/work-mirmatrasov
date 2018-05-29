@@ -204,14 +204,14 @@
         arrowShape: arrowStyle,
         setGallerySize: true,
         initialIndex: 1,
-        prevNextButtons: true,
+        prevNextButtons: false,
         draggable: false,
         resize: false,
-        wrapAround: true,
-        pageDots: false,
+        wrapAround: !true,
+        pageDots: true,
         contain: false,
         percentPosition: true,
-        cellAlign: 'center'
+        cellAlign: 'left'
       })
       //TODO
       var fctData = fct.data("flickity");
@@ -224,7 +224,19 @@
         }, 200)
       })
     })
+    
 
+    $(".prev-next-dots").map( function(i, el){
+      var el = $(el);
+      var prev = el.find(".carousel-prev-next .prev");
+      var next = el.find(".carousel-prev-next .next");
+      el.find(".carousel-prev-next").remove();
+      el.find(".flickity-page-dots").addClass("carousel-prev-next")
+      el.find(".flickity-page-dots").append( next )
+      el.find(".flickity-page-dots").prepend( prev )
+      console.log(el);
+    })
+    flickityPrevNext( $(".productions-carousel") );
 
 
 
@@ -559,7 +571,7 @@
         revSlider.revolution({
           delay: 6000,
           //startwidth: checkSm() ? $(window).width() : checkMd() ? 970 : 1170,
-          startheight: checkSm() ? 200 : 576,
+          startheight: checkSm() ? 400 : 576,
           autoHeight: "on",
           fullScreenAlignForce: "on",
 
@@ -624,10 +636,13 @@
 
     });
     if (revSlider.length) {
-      var prevnext = $(".tparrows").append('<svg viewBox="0 0 100 100"><path d="M 10,50 L 50,85 L 55,75 L 30,50  L 55,25 L 50,15 Z" class="arrow"></path></svg>')
+      var prevnext = $(".tparrows").append('<svg viewBox="0 0 100 100"><path d="m 155.5,511.05029 c -14.92812,-2.39991 -25.15735,-7.59291 -35.62063,-18.08328 -20.010278,-20.06208 -24.367553,-48.94152 -11.18912,-74.15998 4.27918,-8.18871 3.4896,-7.32491 85.11756,-93.11894 44.14125,-46.3941 66.05106,-70.10921 65.53977,-70.94004 -0.42243,-0.68643 -30.03595,-31.85928 -65.80782,-69.273 C 108.45042,96.480286 112.98308,101.40536 108.7963,93.394785 95.502188,67.959105 99.833686,38.961875 119.90555,19.023899 132.47133,6.5419303 146.90753,0.52541276 164,0.64682842 c 15.52694,0.11029502 29.74307,5.20335378 40.51825,14.51603758 4.19014,3.621416 169.75189,176.117894 189.1673,197.090774 23.42252,25.30142 22.81842,61.89665 -1.45102,87.9006 -34.30717,36.75907 -182.76162,192.36607 -187.15932,196.17668 -13.03799,11.29743 -33.349,17.32797 -49.57521,14.71937 z" class="arrow" style="transform: scale(0.19);"></path></svg>')
+      console.log( prevnext )
       $(".arrow-container.container").append(prevnext).css("top", "350");
       $(".arrow-container.container").css("top", "-" + ($(".rev-slider").css("height").match(/(\d+)/gim)[0] / 2) + "px");
     }
+    $(".flickity-btn-1 .flickity-prev-next-button svg").remove()
+    $(".flickity-btn-1 .flickity-prev-next-button").append('<svg viewBox="0 0 100 100"><path d="m 155.5,511.05029 c -14.92812,-2.39991 -25.15735,-7.59291 -35.62063,-18.08328 -20.010278,-20.06208 -24.367553,-48.94152 -11.18912,-74.15998 4.27918,-8.18871 3.4896,-7.32491 85.11756,-93.11894 44.14125,-46.3941 66.05106,-70.10921 65.53977,-70.94004 -0.42243,-0.68643 -30.03595,-31.85928 -65.80782,-69.273 C 108.45042,96.480286 112.98308,101.40536 108.7963,93.394785 95.502188,67.959105 99.833686,38.961875 119.90555,19.023899 132.47133,6.5419303 146.90753,0.52541276 164,0.64682842 c 15.52694,0.11029502 29.74307,5.20335378 40.51825,14.51603758 4.19014,3.621416 169.75189,176.117894 189.1673,197.090774 23.42252,25.30142 22.81842,61.89665 -1.45102,87.9006 -34.30717,36.75907 -182.76162,192.36607 -187.15932,196.17668 -13.03799,11.29743 -33.349,17.32797 -49.57521,14.71937 z" class="arrow" style="transform: scale(0.19)"></path></svg>')
 
 
 
