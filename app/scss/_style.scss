@@ -366,7 +366,7 @@ header{
 }
 .header-hidden{
 	//position: relative;
-	height: 280px;
+	height: $header-top-height + $header-middle-height + $header-bottom-height;
 	display: block;
 	@media ( max-width: 991px ){
 		height: 100px;
@@ -407,20 +407,20 @@ header{
 	}
 	&.scrolled, &.header-pages{
 		.header-top-content{
-			top: -60px;
+			//top: -60px;
 			border-radius: 0 0 3px 3px;
 			transform: perspective(1800px) rotateX(-90deg);	
 			transform-origin: 50% 0;
 		}
 		.header-middle-content{
 			@extend .shadow-default ;
-    	top: -160px;
+    	top: -143px;
 			.logo{
 				height: 80px;
 			}
 		}
 		.header-bottom-content{
-			top: -153px;
+			top: -143px;
 			@extend .shadow-default ;
 		}
 	}
@@ -1032,7 +1032,7 @@ main{
 	}
 }
 hr{
-	border-color: rgba( white, 0.2 );
+	border-color: rgba(165, 165, 165, 0.62);
 }
 
 body, #page{

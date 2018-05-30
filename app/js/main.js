@@ -91,7 +91,7 @@
         var btnPrev = carouselPrevNext.find(".prev");
         var flkty = carousel.data("flickity");
         var selected;
-        console.log(carousel)
+        console.log(btnNext, carousel)
         btnNext.on("click", function() {
           carousel.flickity("next", true);
         });
@@ -263,33 +263,6 @@
             });
           var flkty = crs.data("flickity");
 
-          //ГК
-          crs.on('settle.flickity', function(e) {
-            $(flkty.selectedElement).siblings().css("pointer-events", "none");
-            var selecedIndex = carouselMain.find(".carousel-cell.is-selected").index() + 1;
-
-            console.log(this, e);
-            var zoomContainer = $(".zoomContainer") || null
-            if (!zoomContainer)
-              return;
-            zoomContainer.removeClass("is-selected");
-            zoomContainer.filter("[zoomitem='" + selecedIndex + "']").addClass("is-selected");
-            if (!zoomContainer.hasClass("zoom-image"))
-              zoomContainer.map(function(i, el) {
-                $(el).addClass("zoom-image")
-                if (i === 0)
-                  $(el).addClass("is-selected")
-
-                console.log($(el), i)
-                $(el).attr("zoomitem", (i + 1))
-              })
-
-
-          })
-          crs.on('select.flickity', function(e) {
-            $(flkty.selectedElement).css("pointer-events", "");
-          })
-
           $(carouselNav).eq(i).flickity({
             imagesLoaded: true,
             initialIndex: 0,
@@ -311,137 +284,11 @@
 
 
 
-    //products counter
-    function productsCounter(){
-      var form = $(".products-cnt-form form") || null;
-      if( !form )
-        return;
-
-      $(document).on("click", ".cnt-btn", function(){
-        var cntVal;
-        var cntInput = $(this).closest(".products-cnt-form").find(".cnt-input");
-        
-        cntVal = (cntInput.val()*1);
-
-        if( $(this).hasClass("plus") )
-          cntVal = cntVal + 1;
-        if( $(this).hasClass("minus") & cntVal > 0 )
-          cntVal = cntVal - 1;
-        if( isNaN( cntVal ) ) cntVal = 0;
-        cntInput.val( cntVal ).attr("value", cntVal)
-      })
-      $(".cnt-input").on( "keypress", function(e){
-        //console.log(this, e);
-      } )
-
-    }
-    productsCounter();
 
 
 
 
 
-
-
-
-
-
-/*TODO
-
-
-    window.Basket = {
-      storageName: location.hostname + "-basket",
-      orders: [],
-      basketModal: ".basket-modal-items",
-      json: localStorage[this.storageName],
-      //initBasket
-      initBasket: function() {
-        if (localStorage[this.storageName])
-          this.orders = JSON.parse(localStorage[this.storageName]);
-        for (var i = 0; i < this.orders.length; i++)
-          $(this.basketModal).append(this.orders[i].template)
-        this.changeBasket();
-      },
-      //changeBasket
-      changeBasket: function() {
-        localStorage[this.storageName] = JSON.stringify(this.orders);
-        $(".bakset-cnt").text(this.orders.length);
-        if (this.orders.length === 0)
-          $(".if-clear").fadeIn(1000);
-        else
-          $(".if-clear").hide();
-      },
-      checkOrderid: function(id) {
-        for (var i = 0; i < this.orders.length; i++)
-          if (this.orders[i].id == id)
-            return true;
-        return false;
-      },
-      //appedBasket
-      appedBasket: function(button) {
-        var that = this;
-        var orderid = button.attr("data-order-id");
-        var templateid = button.attr("data-order-templateid");
-        var template = $("[data-templateid='" + templateid + "']").eq(0);
-        var basketArea = $(button.attr("data-basket"));
-        var templateBasket = basketArea.find("[data-templateid='" + templateid + "']") || null;
-
-        if (Basket.checkOrderid(orderid))
-          return;
-
-        function __appended() {
-          var order = {
-            id: orderid,
-            template: template[0].outerHTML
-          }
-          Basket.orders.push(order);
-          localStorage[Basket.storageName] = JSON.stringify(Basket.orders);
-          basketArea.append(template);
-        }
-
-
-        if (templateBasket.length != 0) {
-          templateBasket.slideDown(300, function() {
-            __appended()
-            that.changeBasket();
-          });
-        } else {
-          __appended()
-          that.changeBasket();
-        }
-
-      },
-      //removeBasketItem
-      removeBasketItem: function(id, f) {
-        this.orders = this.orders.filter(function(el, i) {
-          return el.id != id;
-        })
-        console.log(this.orders)
-        this.changeBasket();
-        if (typeof f === "function")
-          f();
-      }
-    }
-    Basket.initBasket();
-
-    $("[data-order-del]").on("click", function() {
-      var that = $(this);
-      var orderId = that.attr("data-order-del");
-      var templateId = that.attr("data-template-del");
-
-      function callBack() {
-        $("[data-templateid='" + templateId + "']").slideUp(400);
-      }
-      Basket.removeBasketItem(orderId, callBack);
-    })
-
-    $(document).on("click", ".link-cart", function() {
-      var that = $(this);
-      Basket.appedBasket(that);
-    })
-
-
-*/
 
 
 
