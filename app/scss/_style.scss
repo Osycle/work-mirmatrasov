@@ -387,9 +387,6 @@ header{
 		white-space: nowrap;
 	}
 }
-.header-bottom-content{
-	
-}
 .header-scroll{
 
 	.menu .phones, .desc-content, .img-content, img{
@@ -1945,53 +1942,6 @@ a[target="_blank"]{
 }
 
 
-//wholesalers
-.form-control{
-	box-shadow: none;
-}
-.wholesalers-modal{
-
-}
-.wholesalers{
-	.text-content{
-		min-height: 350px;
-	}
-}
-.wholesalers-carousel{
-
-	.carousel-items{
-		figure{
-			width: 100%;
-			opacity:0;
-			transition: all 0.3s ease-in-out;
-			&.is-selected{
-				opacity:1;
-			}
-		}
-		.img-content{
-			background-position: center;
-			background-size: contain;
-    	background-repeat: no-repeat;
-			width: 100%;
-			height: 400px;	
-		}
-		.flickity-prev-next-button{
-			opacity: 0;
-			transition: all 0.3s ease-in-out;
-		}
-		.flickity-page-dots{
-			bottom: 25px;
-		}
-		&:hover{
-			.flickity-prev-next-button{
-				opacity: 1;
-			}
-		}
-	}
-}
-
-
-
 
 
 
@@ -2471,6 +2421,86 @@ html body{
 
 
 
+/* --TEMP */
+// .compare-images{
+// 	position: relative;
+// 	.compare-images-items{
+// 		position: relative;
+// 		display: flex;
+// 		flex: 1 1;
+// 		.compare-image-1{
+// 			left: 0;
+// 			//border-right: 10px solid #ef7c00;
+// 		}
+// 		.compare-image-2{
+// 			right: 0;
+// 		}
+// 		.img-content{
+// 			background-color: black;
+// 		}
+// 		.desc-content{
+// 			text-align: center;
+// 			transition: all 0.3s ease;
+// 		}
+// 		figure{
+// 			width: 50%;
+// 			transition: all 0.8s ease;
+// 			position: relative;
+// 			z-index: 0;
+// 			.img{
+// 				opacity: 0.6;
+// 				transition: all 0.8s ease;
+// 				background-repeat: no-repeat;
+// 				background-position: center;
+// 				background-size: cover;
+// 				height: 450px;
+// 			}
+// 			&:hover{
+// 				cursor: crosshair;
+// 				width: 100vw !important;
+// 				z-index: 1;
+// 				.img{
+// 					opacity: 1;	
+// 				}
+// 			}
+// 		}
+// 		@media (min-width:992px) {
+// 			figure{
+// 				.img{
+// 					box-shadow: 0 5px 20px -5px rgba(black, 0.8), 0 -5px 20px -5px rgba(black, 0.8);
+// 					filter: contrast(100%);
+// 				}
+// 				&:hover{
+// 					.img{
+// 						filter: contrast(120%);
+// 					}
+// 				}
+// 			}
+// 		}
+// 		@media (max-width:991px) {
+
+// 			&:hover{
+// 				figure{
+// 					width: 10%;	
+// 					overflow: hidden;
+// 					.desc-content{
+// 						opacity: 0;
+// 					}
+// 				}
+// 			}
+// 			figure{
+// 				.img{
+// 					height: 300px;
+// 				}
+// 				&:hover{
+// 					.desc-content{
+// 						opacity: 1 !important;
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }
 
 
 
