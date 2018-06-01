@@ -91,23 +91,25 @@
         var btnPrev = carouselPrevNext.find(".prev");
         var flkty = carousel.data("flickity");
         var selected;
-        console.log(btnNext, carousel)
-        btnNext.on("click", function() {
-          carousel.flickity("next", true);
+        var that = this;
+        btnNext.on("click", carousel, function(e) {
+          e.data.flickity("next", true);
+          console.log( e.data )
         });
 
-        btnPrev.on("click", function() {
-          carousel.flickity("previous", true);
+        btnPrev.on("click", carousel, function(e) {
+          e.data.flickity("previous", true);
         });
-        carousel.on("select.flickity", function() {
-          selected = $(flkty.selectedElement);
-          selected
-            .siblings()
-            .addBack()
-            .removeClass("is-next is-prev");
-          selected.next().addClass("is-next");
-          selected.prev().addClass("is-prev");
-        });
+        // carousel.on("select.flickity-"+i, function() {
+        //   console.log(this);
+        //   selected = $(flkty.selectedElement);
+        //   selected
+        //     .siblings()
+        //     .addBack()
+        //     .removeClass("is-next is-prev");
+        //   selected.next().addClass("is-next");
+        //   selected.prev().addClass("is-prev");
+        // });
       }
     }
 
@@ -140,33 +142,6 @@
       });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-    var brandMenu = $('.brands-menu-carousel .carousel-items').flickity({
-      imagesLoaded: true,
-      autoPlay: false,
-      arrowShape: arrowStyle,
-      initialIndex: 0,
-      prevNextButtons: false,
-      draggable: false,
-      friction: 1,
-      selectedAttraction: 1,
-      wrapAround: true,
-      pageDots: false,
-      contain: true,
-      percentPosition: true,
-      cellAlign: 'center'
-    });
 
     $('.button-group').on('click', 'li', function() {
       var that = $(this);
@@ -213,19 +188,20 @@
         percentPosition: true,
         cellAlign: 'left'
       })
+      
+      //console.log( $(el).closest(".productions-carousel") )
+
       //TODO
       var fctData = fct.data("flickity");
-      $(fct).on('ready.flickity', function() {
-        console.log('Flickity ready');
-      });
-      $(document).on("click", "[flickity='resize']", function() {
-        setTimeout(function() {
-          fct.flickity('resize');
-        }, 200)
-      })
+        $(fct).on('ready.flickity', function() {
+          console.log('Flickity ready');
+        });
+        $(document).on("click", "[flickity='resize']", function() {
+          setTimeout(function() {
+            fct.flickity('resize');
+          }, 200)
+        })
     })
-    
-
     $(".prev-next-dots").map( function(i, el){
       var el = $(el);
       var prev = el.find(".carousel-prev-next .prev");
@@ -234,7 +210,7 @@
       el.find(".flickity-page-dots").addClass("carousel-prev-next")
       el.find(".flickity-page-dots").append( next )
       el.find(".flickity-page-dots").prepend( prev )
-      console.log(el);
+      //console.log(el);
     })
     flickityPrevNext( $(".productions-carousel") );
 
@@ -412,15 +388,16 @@
 
 
     var revSlider = $('.rev-slider') || null;
-
+    // Правильное корректировка высоты при col-md-8
+    var desctopHeight = 450 * (1+1-8/12)-30+6;
     onResized(function() {
       if (revSlider.length != 0)
         revSlider.revolution({
           delay: 6000,
           //startwidth: checkSm() ? $(window).width() : checkMd() ? 970 : 1170,
-          startheight: checkSm() ? 400 : 576,
-          autoHeight: "on",
-          fullScreenAlignForce: "on",
+          startheight: checkSm() ? desctopHeight-50 : desctopHeight,
+          autoHeight: "off",
+          fullScreenAlignForce: "off",
 
           onHoverStop: "on",
 
@@ -433,13 +410,13 @@
           hideArrowsOnMobile: "on",
           hideThumbsUnderResoluition: 0,
 
-          hideThumbs: -1,
+          hideThumbs: 500,
           hideTimerBar: "on",
 
           keyboardNavigation: "off",
 
           navigationType: "bullet",
-          navigationArrows: "solo", //solo
+          navigationArrows: "solo",
           navigationStyle: "round",
 
           navigationHAlign: "center",
@@ -470,8 +447,9 @@
           hideAllCaptionAtLilmit: 0,
           hideSliderAtLimit: 0,
 
-          fullWidth: "off",
+          fullWidth: "on",
           fullScreen: "off",
+          fullScreenOffsetContainer: "",
 
           dottedOverlay: "none",
           forceFullWidth: "off",
@@ -484,7 +462,6 @@
     });
     if (revSlider.length) {
       var prevnext = $(".tparrows").append('<svg viewBox="0 0 100 100"><path d="m 155.5,511.05029 c -14.92812,-2.39991 -25.15735,-7.59291 -35.62063,-18.08328 -20.010278,-20.06208 -24.367553,-48.94152 -11.18912,-74.15998 4.27918,-8.18871 3.4896,-7.32491 85.11756,-93.11894 44.14125,-46.3941 66.05106,-70.10921 65.53977,-70.94004 -0.42243,-0.68643 -30.03595,-31.85928 -65.80782,-69.273 C 108.45042,96.480286 112.98308,101.40536 108.7963,93.394785 95.502188,67.959105 99.833686,38.961875 119.90555,19.023899 132.47133,6.5419303 146.90753,0.52541276 164,0.64682842 c 15.52694,0.11029502 29.74307,5.20335378 40.51825,14.51603758 4.19014,3.621416 169.75189,176.117894 189.1673,197.090774 23.42252,25.30142 22.81842,61.89665 -1.45102,87.9006 -34.30717,36.75907 -182.76162,192.36607 -187.15932,196.17668 -13.03799,11.29743 -33.349,17.32797 -49.57521,14.71937 z" class="arrow" style="transform: scale(0.19);"></path></svg>')
-      console.log( prevnext )
       $(".arrow-container.container").append(prevnext).css("top", "350");
       $(".arrow-container.container").css("top", "-" + ($(".rev-slider").css("height").match(/(\d+)/gim)[0] / 2) + "px");
     }

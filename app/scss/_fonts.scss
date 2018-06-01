@@ -1,17 +1,16 @@
-
 $path: "../fonts/";
 
 // Font-awesome
 @font-face {
-  font-family: 'FontAwesome';
-  src: url($path+'fontawesome-webfont.eot?v=4.7.0');
-  src: url($path+'fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
-       url($path+'fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
-       url($path+'fontawesome-webfont.woff?v=4.7.0') format('woff'),
-       url($path+'fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
-       url($path+'fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'FontAwesome';
+    src: url($path+'fontawesome-webfont.eot?v=4.7.0');
+    src: url($path+'fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'),
+    url($path+'fontawesome-webfont.woff2?v=4.7.0') format('woff2'),
+    url($path+'fontawesome-webfont.woff?v=4.7.0') format('woff'),
+    url($path+'fontawesome-webfont.ttf?v=4.7.0') format('truetype'),
+    url($path+'fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -22,140 +21,386 @@ $path: "../fonts/";
 
 
 
+/* Gotham Pro */
+
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url($path+'GothamPro-BoldItalic.eot');
-  src: local('Gotham Pro Bold Italic'), local('GothamPro-BoldItalic'),
+    font-family: 'Gotham Pro';
+    src: url($path+'GothamPro-BoldItalic.eot');
+    src: local('Gotham Pro Bold Italic'), local('GothamPro-BoldItalic'),
     url($path+'GothamPro-BoldItalic.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamPro-BoldItalic.woff') format('woff'),
     url($path+'GothamPro-BoldItalic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
+    font-weight: bold;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url($path+'GothamPro-Italic.eot');
-  src: local('Gotham Pro Italic'), local('GothamPro-Italic'),
+    font-family: 'Gotham Pro';
+    src: url($path+'GothamPro-Italic.eot');
+    src: local('Gotham Pro Italic'), local('GothamPro-Italic'),
     url($path+'GothamPro-Italic.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamPro-Italic.woff') format('woff'),
     url($path+'GothamPro-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
+    font-weight: normal;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url($path+'GothamPro-Medium.eot');
-  src: local('Gotham Pro Medium'), local('GothamPro-Medium'),
+    font-family: 'Gotham Pro';
+    src: url($path+'GothamPro-Medium.eot');
+    src: local('Gotham Pro Medium'), local('GothamPro-Medium'),
     url($path+'GothamPro-Medium.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamPro-Medium.woff') format('woff'),
     url($path+'GothamPro-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url($path+'GothamPro-BlackItalic.eot');
-  src: local('Gotham Pro Black Italic'), local('GothamPro-BlackItalic'),
+    font-family: 'Gotham Pro';
+    src: url($path+'GothamPro-BlackItalic.eot');
+    src: local('Gotham Pro Black Italic'), local('GothamPro-BlackItalic'),
     url($path+'GothamPro-BlackItalic.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamPro-BlackItalic.woff') format('woff'),
     url($path+'GothamPro-BlackItalic.ttf') format('truetype');
-  font-weight: 900;
-  font-style: italic;
+    font-weight: 900;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url($path+'GothamPro-Bold.eot');
-  src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
+    font-family: 'Gotham Pro';
+    src: url($path+'GothamPro-Bold.eot');
+    src: local('Gotham Pro Bold'), local('GothamPro-Bold'),
     url($path+'GothamPro-Bold.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamPro-Bold.woff') format('woff'),
     url($path+'GothamPro-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham Pro Narrow';
-  src: url($path+'GothamProNarrow-Bold.eot');
-  src: local('Gotham Pro Narrow Bold'), local('GothamProNarrow-Bold'),
+    font-family: 'Gotham Pro Narrow';
+    src: url($path+'GothamProNarrow-Bold.eot');
+    src: local('Gotham Pro Narrow Bold'), local('GothamProNarrow-Bold'),
     url($path+'GothamProNarrow-Bold.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamProNarrow-Bold.woff') format('woff'),
     url($path+'GothamProNarrow-Bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
+    font-weight: bold;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham Pro Narrow';
-  src: url($path+'GothamProNarrow-Medium.eot');
-  src: local('Gotham Pro Narrow Medium'), local('GothamProNarrow-Medium'),
+    font-family: 'Gotham Pro Narrow';
+    src: url($path+'GothamProNarrow-Medium.eot');
+    src: local('Gotham Pro Narrow Medium'), local('GothamProNarrow-Medium'),
     url($path+'GothamProNarrow-Medium.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamProNarrow-Medium.woff') format('woff'),
     url($path+'GothamProNarrow-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url($path+'GothamPro-LightItalic.eot');
-  src: local('Gotham Pro Light Italic'), local('GothamPro-LightItalic'),
+    font-family: 'Gotham Pro';
+    src: url($path+'GothamPro-LightItalic.eot');
+    src: local('Gotham Pro Light Italic'), local('GothamPro-LightItalic'),
     url($path+'GothamPro-LightItalic.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamPro-LightItalic.woff') format('woff'),
     url($path+'GothamPro-LightItalic.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
+    font-weight: 300;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url($path+'GothamPro-Light.eot');
-  src: local('Gotham Pro Light'), local('GothamPro-Light'),
+    font-family: 'Gotham Pro';
+    src: url($path+'GothamPro-Light.eot');
+    src: local('Gotham Pro Light'), local('GothamPro-Light'),
     url($path+'GothamPro-Light.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamPro-Light.woff') format('woff'),
     url($path+'GothamPro-Light.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url($path+'GothamPro-Black.eot');
-  src: local('Gotham Pro Black'), local('GothamPro-Black'),
+    font-family: 'Gotham Pro';
+    src: url($path+'GothamPro-Black.eot');
+    src: local('Gotham Pro Black'), local('GothamPro-Black'),
     url($path+'GothamPro-Black.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamPro-Black.woff') format('woff'),
     url($path+'GothamPro-Black.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
+    font-weight: 900;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url($path+'GothamPro.eot');
-  src: local('Gotham Pro'), local('GothamPro'),
+    font-family: 'Gotham Pro';
+    src: url($path+'GothamPro.eot');
+    src: local('Gotham Pro'), local('GothamPro'),
     url($path+'GothamPro.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamPro.woff') format('woff'),
     url($path+'GothamPro.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Gotham Pro';
-  src: url($path+'GothamPro-MediumItalic.eot');
-  src: local('Gotham Pro Medium Italic'), local('GothamPro-MediumItalic'),
+    font-family: 'Gotham Pro';
+    src: url($path+'GothamPro-MediumItalic.eot');
+    src: local('Gotham Pro Medium Italic'), local('GothamPro-MediumItalic'),
     url($path+'GothamPro-MediumItalic.eot?#iefix') format('embedded-opentype'),
     url($path+'GothamPro-MediumItalic.woff') format('woff'),
     url($path+'GothamPro-MediumItalic.ttf') format('truetype');
-  font-weight: 500;
-  font-style: italic;
+    font-weight: 500;
+    font-style: italic;
 }
 
 
 
+
+
+
+
+
+/* Gilroy */
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroySemiBold.eot');
+    src: url($path+'GilroySemiBold.eot') format('embedded-opentype'),
+    url($path+'GilroySemiBold.woff2') format('woff2'),
+    url($path+'GilroySemiBold.woff') format('woff'),
+    url($path+'GilroySemiBold.ttf') format('truetype'),
+    url($path+'GilroySemiBold.svg#GilroySemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroySemiBoldItalic.eot');
+    src: url($path+'GilroySemiBoldItalic.eot') format('embedded-opentype'),
+    url($path+'GilroySemiBoldItalic.woff2') format('woff2'),
+    url($path+'GilroySemiBoldItalic.woff') format('woff'),
+    url($path+'GilroySemiBoldItalic.ttf') format('truetype'),
+    url($path+'GilroySemiBoldItalic.svg#GilroySemiBoldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyBoldItalic.eot');
+    src: url($path+'GilroyBoldItalic.eot') format('embedded-opentype'),
+    url($path+'GilroyBoldItalic.woff2') format('woff2'),
+    url($path+'GilroyBoldItalic.woff') format('woff'),
+    url($path+'GilroyBoldItalic.ttf') format('truetype'),
+    url($path+'GilroyBoldItalic.svg#GilroyBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyBold.eot');
+    src: url($path+'GilroyBold.eot') format('embedded-opentype'),
+    url($path+'GilroyBold.woff2') format('woff2'),
+    url($path+'GilroyBold.woff') format('woff'),
+    url($path+'GilroyBold.ttf') format('truetype'),
+    url($path+'GilroyBold.svg#GilroyBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyExtraBold.eot');
+    src: url($path+'GilroyExtraBold.eot') format('embedded-opentype'),
+    url($path+'GilroyExtraBold.woff2') format('woff2'),
+    url($path+'GilroyExtraBold.woff') format('woff'),
+    url($path+'GilroyExtraBold.ttf') format('truetype'),
+    url($path+'GilroyExtraBold.svg#GilroyExtraBold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyExtraBoldItalic.eot');
+    src: url($path+'GilroyExtraBoldItalic.eot') format('embedded-opentype'),
+    url($path+'GilroyExtraBoldItalic.woff2') format('woff2'),
+    url($path+'GilroyExtraBoldItalic.woff') format('woff'),
+    url($path+'GilroyExtraBoldItalic.ttf') format('truetype'),
+    url($path+'GilroyExtraBoldItalic.svg#GilroyExtraBoldItalic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyBlack.eot');
+    src: url($path+'GilroyBlack.eot') format('embedded-opentype'),
+    url($path+'GilroyBlack.woff2') format('woff2'),
+    url($path+'GilroyBlack.woff') format('woff'),
+    url($path+'GilroyBlack.ttf') format('truetype'),
+    url($path+'GilroyBlack.svg#GilroyBlack') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyBlackItalic.eot');
+    src: url($path+'GilroyBlackItalic.eot') format('embedded-opentype'),
+    url($path+'GilroyBlackItalic.woff2') format('woff2'),
+    url($path+'GilroyBlackItalic.woff') format('woff'),
+    url($path+'GilroyBlackItalic.ttf') format('truetype'),
+    url($path+'GilroyBlackItalic.svg#GilroyBlackItalic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyHeavy.eot');
+    src: url($path+'GilroyHeavy.eot') format('embedded-opentype'),
+    url($path+'GilroyHeavy.woff2') format('woff2'),
+    url($path+'GilroyHeavy.woff') format('woff'),
+    url($path+'GilroyHeavy.ttf') format('truetype'),
+    url($path+'GilroyHeavy.svg#GilroyHeavy') format('svg');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyHeavyItalic.eot');
+    src: url($path+'GilroyHeavyItalic.eot') format('embedded-opentype'),
+    url($path+'GilroyHeavyItalic.woff2') format('woff2'),
+    url($path+'GilroyHeavyItalic.woff') format('woff'),
+    url($path+'GilroyHeavyItalic.ttf') format('truetype'),
+    url($path+'GilroyHeavyItalic.svg#GilroyHeavyItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyMedium.eot');
+    src: url($path+'GilroyMedium.eot') format('embedded-opentype'),
+    url($path+'GilroyMedium.woff2') format('woff2'),
+    url($path+'GilroyMedium.woff') format('woff'),
+    url($path+'GilroyMedium.ttf') format('truetype'),
+    url($path+'GilroyMedium.svg#GilroyMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyMediumItalic.eot');
+    src: url($path+'GilroyMediumItalic.eot') format('embedded-opentype'),
+    url($path+'GilroyMediumItalic.woff2') format('woff2'),
+    url($path+'GilroyMediumItalic.woff') format('woff'),
+    url($path+'GilroyMediumItalic.ttf') format('truetype'),
+    url($path+'GilroyMediumItalic.svg#GilroyMediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyRegular.eot');
+    src: url($path+'GilroyRegular.eot') format('embedded-opentype'),
+    url($path+'GilroyRegular.woff2') format('woff2'),
+    url($path+'GilroyRegular.woff') format('woff'),
+    url($path+'GilroyRegular.ttf') format('truetype'),
+    url($path+'GilroyRegular.svg#GilroyRegular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyRegularItalic.eot');
+    src: url($path+'GilroyRegularItalic.eot') format('embedded-opentype'),
+    url($path+'GilroyRegularItalic.woff2') format('woff2'),
+    url($path+'GilroyRegularItalic.woff') format('woff'),
+    url($path+'GilroyRegularItalic.ttf') format('truetype'),
+    url($path+'GilroyRegularItalic.svg#GilroyRegularItalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyThin.eot');
+    src: url($path+'GilroyThin.eot') format('embedded-opentype'),
+    url($path+'GilroyThin.woff2') format('woff2'),
+    url($path+'GilroyThin.woff') format('woff'),
+    url($path+'GilroyThin.ttf') format('truetype'),
+    url($path+'GilroyThin.svg#GilroyThin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyThinItalic.eot');
+    src: url($path+'GilroyThinItalic.eot') format('embedded-opentype'),
+    url($path+'GilroyThinItalic.woff2') format('woff2'),
+    url($path+'GilroyThinItalic.woff') format('woff'),
+    url($path+'GilroyThinItalic.ttf') format('truetype'),
+    url($path+'GilroyThinItalic.svg#GilroyThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyLight.eot');
+    src: url($path+'GilroyLight.eot') format('embedded-opentype'),
+    url($path+'GilroyLight.woff2') format('woff2'),
+    url($path+'GilroyLight.woff') format('woff'),
+    url($path+'GilroyLight.ttf') format('truetype'),
+    url($path+'GilroyLight.svg#GilroyLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyLightItalic.eot');
+    src: url($path+'GilroyLightItalic.eot') format('embedded-opentype'),
+    url($path+'GilroyLightItalic.woff2') format('woff2'),
+    url($path+'GilroyLightItalic.woff') format('woff'),
+    url($path+'GilroyLightItalic.ttf') format('truetype'),
+    url($path+'GilroyLightItalic.svg#GilroyLightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyUltraLight.eot');
+    src: url($path+'GilroyUltraLight.eot') format('embedded-opentype'),
+    url($path+'GilroyUltraLight.woff2') format('woff2'),
+    url($path+'GilroyUltraLight.woff') format('woff'),
+    url($path+'GilroyUltraLight.ttf') format('truetype'),
+    url($path+'GilroyUltraLight.svg#GilroyUltraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url($path+'GilroyUltraLightItalic.eot');
+    src: url($path+'GilroyUltraLightItalic.eot') format('embedded-opentype'),
+    url($path+'GilroyUltraLightItalic.woff2') format('woff2'),
+    url($path+'GilroyUltraLightItalic.woff') format('woff'),
+    url($path+'GilroyUltraLightItalic.ttf') format('truetype'),
+    url($path+'GilroyUltraLightItalic.svg#GilroyUltraLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+}
 
 
 
@@ -178,6 +423,7 @@ $path: "../fonts/";
 
  */
 
+
 /* 
 @font-face {
     font-family: 'MuseoCyrl500';
@@ -191,9 +437,6 @@ $path: "../fonts/";
  */
 
 
-
-
-
 /* @font-face {
     font-family: 'archive';
     src: url($path+'archive.eot');
@@ -205,9 +448,8 @@ $path: "../fonts/";
 }
  */
 
-
-
 //Verdana
+
 /* @font-face {
     font-family: 'Verdanabold';
     font-weight: bold;
@@ -227,11 +469,6 @@ $path: "../fonts/";
          url($path+'Verdanaregular.ttf') format('truetype'),
          url($path+'Verdanaregular.svg#Verdanaregular') format('svg');
 } */
-
-
-
-
-
 
 
 /* @font-face {
