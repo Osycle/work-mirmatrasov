@@ -226,8 +226,8 @@ html{
 
 		color: rgba(black, 0.4);
 		font-family: FontAwesome;
-		content: "/";
-		font-size: 1.5em;
+		content: "\f0da";
+		font-size: 0.9em;
 		margin:0  15px;
 	}
 	li{
@@ -443,7 +443,7 @@ label{
 
 .bg-color-white{background-color: white;}
 .bg-color-black{background-color: $bg-color-black;}
-.bg-color-gray{background-color: #F4F4F4;}
+.bg-color-gray{background-color: #EEEEEE;}
 
 .bg-color-1{background-color: $color-1;}
 .bg-color-2{background-color: $color-2;}

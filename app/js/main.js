@@ -67,11 +67,11 @@
         title: "Меню"
       },
       navbars: [{
-          height: 2,
+          height: 0,
           content: [
-            '<div class="close-btn close-content bar">' +
-            '<a  href="#page" ><span class="icon-bar"></span><span class="icon-bar"></span></a>' +
-            '</div>'
+            // '<div class="close-btn close-content bar">' +
+            // '<a  href="#page" ><span class="icon-bar"></span><span class="icon-bar"></span></a>' +
+            // '</div>'
           ]
         },
         {
@@ -188,8 +188,6 @@
         percentPosition: true,
         cellAlign: 'left'
       })
-      
-      //console.log( $(el).closest(".productions-carousel") )
 
       //TODO
       var fctData = fct.data("flickity");
@@ -202,19 +200,47 @@
           }, 200)
         })
     })
-    $(".prev-next-dots").map( function(i, el){
-      var el = $(el);
-      var prev = el.find(".carousel-prev-next .prev");
-      var next = el.find(".carousel-prev-next .next");
-      el.find(".carousel-prev-next").remove();
-      el.find(".flickity-page-dots").addClass("carousel-prev-next")
-      el.find(".flickity-page-dots").append( next )
-      el.find(".flickity-page-dots").prepend( prev )
-      //console.log(el);
+
+    //customers-carousel
+    //if( $('.customers-carousel .carousel-items figure').length >= 5 )
+    $('.customers-carousel .carousel-items').map(function(i, el) {
+      var fct = $(el).flickity({
+        imagesLoaded: true,
+        autoPlay: false,
+        pauseAutoPlayOnHover: true,
+        lazyLoad: true,
+        arrowShape: arrowStyle,
+        setGallerySize: true,
+        initialIndex: 0,
+        prevNextButtons: false,
+        draggable: false,
+        resize: false,
+        wrapAround: true,
+        pageDots: true,
+        contain: false,
+        percentPosition: true,
+        cellAlign: 'left'
+      })
     })
-    flickityPrevNext( $(".productions-carousel") );
-
-
+    $('.galleryvideo-carousel .carousel-items').map(function(i, el) {
+      var fct = $(el).flickity({
+        imagesLoaded: true,
+        autoPlay: false,
+        pauseAutoPlayOnHover: true,
+        lazyLoad: true,
+        arrowShape: arrowStyle,
+        setGallerySize: true,
+        initialIndex: 0,
+        prevNextButtons: false,
+        draggable: false,
+        resize: false,
+        wrapAround: false,
+        pageDots: true,
+        contain: false,
+        percentPosition: true,
+        cellAlign: 'left'
+      })
+    })
 
 
     window.carouselArticle = function() {
@@ -260,6 +286,23 @@
 
 
 
+    if( $(".prev-next-dots").length )
+    $(".prev-next-dots").map( function(i, el){
+      var el = $(el);
+      var prev = el.find(".carousel-prev-next .prev");
+      var next = el.find(".carousel-prev-next .next");
+      el.find(".carousel-prev-next").remove();
+      el.find(".flickity-page-dots").addClass("carousel-prev-next");
+      el.find(".flickity-page-dots").append( next );
+      el.find(".flickity-page-dots").prepend( prev );
+    })
+    if( $(".flickity-prev-next-custom").length )
+      $(".flickity-prev-next-custom").map(function(i, el){
+        flickityPrevNext( $(el) );
+      });
+
+
+
 
 
 
@@ -294,19 +337,42 @@
     //SCROLL
     var minMenu = $(".header-scroll") || null;
     var headerRange = false;
-
-
+    var counterAnimateContainer = $(".counter-animate-container") || null;
     $(window).on("scroll", function(e) {
 
-      if ($(window).scrollTop() > 50 && headerRange == false) {
+      //Адаптация хедера при скролинге
+      if ($(window).scrollTop() > 100 && headerRange == false) {
 
         headerRange = true;
         if (minMenu) minMenu.addClass("scrolled").addClass("down");
 
-      } else if ($(window).scrollTop() < 50 && headerRange == true) {
+      } else if ($(window).scrollTop() < 100 && headerRange == true) {
         headerRange = !true;
         if (minMenu) minMenu.removeClass("scrolled");
       } //.originalEvent.wheelDelta
+
+      //Анимированный расчёт
+
+      if( counterAnimateContainer.length & !counterAnimateContainer.hasClass("counter-animate-started") & scrolledDiv( counterAnimateContainer ) ){
+        counterAnimateContainer.addClass("counter-animate-started");
+        $(".counter-animate").map( function(i, el){
+          var el = $(el);
+          var num = el.text()*1;
+          if( isNaN(num) )
+            return;
+          var cnt = 0;
+          el.text(cnt)
+          var interval = setInterval(function(){
+            el.text( Math.round(cnt += num/(2*25) ) )
+            if( cnt >= num ){
+              clearInterval( interval );
+              el.text( num );
+            }
+          }, 50)
+        })
+      }
+
+
     });
 
 
@@ -389,7 +455,7 @@
 
     var revSlider = $('.rev-slider') || null;
     // Правильное корректировка высоты при col-md-8
-    var desctopHeight = 450 * (1+1-8/12)-30+6;
+    var desctopHeight = 450 * (2-8/12)-30+6;
     onResized(function() {
       if (revSlider.length != 0)
         revSlider.revolution({

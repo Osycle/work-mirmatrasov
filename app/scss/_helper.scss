@@ -469,6 +469,14 @@ html{
 		border-radius: ($i*5)+px;	
 	}	
 }
+.radius-top{
+	border-top-left-radius: 15px;	
+	border-top-right-radius: 15px;	
+}
+.radius-bottom{
+	border-bottom-left-radius: 15px;	
+	border-bottom-right-radius: 15px;	
+}
 
 
 

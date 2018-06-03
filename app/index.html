@@ -23,50 +23,47 @@
 			<p>Ваш браузер не поддерживает скрипты!
 				<br/> Пожалуйста подключите в настройках браузера Javascript</p>
 		</noscript>
-		<!-- wholesalers-modal -->
-		<div class="wholesalers-modal modal fade animated" id="form-feedback" tabindex="-1" role="dialog">
+		<!-- modal-feedback -->
+		<div class="modal-feedback modal fade animated" id="modal-feedback" tabindex="-1" role="dialog">
 			<div class="modal-dialog" role="document">
 				<div class="modal-content">
-					<button type="button" class="btn" data-dismiss="modal"><span class="icon-bar"></span><span class="icon-bar"></span></button>
+					<button type="button" class="btn close-content" data-dismiss="modal">
+						<span class="icon-bar"></span><span class="icon-bar"></span>
+					</button>
 					<div class="modal-body">
 
 						<!-- success-info -->
 						<div class="col-md-12 success-info m-b-30 text-center">
-							<font color="red"><div class="info-suc" id=""></div></font>
-							<font color="green"><div class="info-err" id=""></div></font>
+							<font color="red"><div class="info-success" id=""></div></font>
+							<font color="green"><div class="info-error" id=""></div></font>
 						</div>
 						<div class="form-content col-md-12">
 							<form method="POST" action="">
-							<h3>Для оптовиков</h3>
+							<h3 class="text-center-sm m-v-10">Связаться с нами</h3>
 							<div class="col-md-12">
-								<label class="box-100">Название фирмы
+								<label class="box-xs-10">ФИО
 									<input class="form-control" type="text" name="" value="">
 								</label>
 							</div>
 							<div class="col-md-12">
-								<label class="box-100">ФИО
+								<label class="box-xs-10">E-mail
 									<input class="form-control" type="text" name="" value="">
 								</label>
 							</div>
 							<div class="col-md-12">
-								<label class="box-100">E-mail
+								<label class="box-xs-10">Телефон
 									<input class="form-control" type="text" name="" value="">
 								</label>
 							</div>
 							<div class="col-md-12">
-								<label class="box-100">Телефон
-									<input class="form-control" type="text" name="" value="">
-								</label>
-							</div>
-							<div class="col-md-12">
-								<label class="box-100">Сообщение
+								<label class="box-xs-10">Сообщение
 									<textarea name="" class="form-control" resize="none"></textarea>
 								</label>
 							</div>
 
 							<br>
 							<div class="form-footer m-v-30 clearfix col-md-12">
-								<button type="submit" class="text-right btn-def color-white btn-res"><b>Отправить</b></button>
+								<button type="submit" class="m-auto-sm btn-def color-white btn-res"><b>Отправить</b></button>
 							</div>
 							</form>
 						</div>
@@ -88,7 +85,7 @@
 							<nav>
 								<ul class="box-xs-10">
 									<li class="active"><a href="delivery.html" title="">Адреса салонов</a></li>
-									<li><a href="about.html" title="">Акции</a></li>
+									<li><a href="shares.html" title="">Акции</a></li>
 									<li><a href="company.html" title="">Компания</a>
 										<ul class="sub-menu-1">
 											<li><a href="about.html" title="">О нас</a></li>
@@ -118,7 +115,7 @@
 						<div class="phones pie-md-elastic-5 p-h-15 text-center hover-color-1">
 							<div class="header-phone">
 								<p class="m-v-10"><a href="tel:+99897774444" title=""><big>+998 97 <big>777-44-44</big></big></a></p>
-								<span class="btn-def radius-2 m-v-10 box-md-5 m-auto"><a href="#form-feedback" class="p-v-10 p-h-25" title="" data-toggle="modal"><small><b>Обратный звонок</b></small></a></span>
+								<span class="btn-def radius-2 m-v-10 box-md-5 m-auto"><a href="#modal-feedback" class="p-v-10 p-h-25" title="" data-toggle="modal"><small><b>Обратный звонок</b></small></a></span>
 							</div>
 						</div>
 						<div class="socicons pie-md-elastic-5 text-right-md color-1 hover-color-2">
@@ -333,8 +330,8 @@
 						<div class="tab-content">
 							<!-- tab-pane -->
 							<div role="tabpanel" class="tab-pane fade in active" id="production-tab-1">
-								<div class="productions-carousel relative flickity-btn-1 prev-next-dots">
-									<div class="figure-m-v-30 carousel-items parag-m-v-10">
+								<div class="productions-carousel relative flickity-btn-1 prev-next-dots flickity-prev-next-custom">
+									<div class="figure-m-v-30 carousel-items parag-m-v-10 catalog-items">
 										<figure>
 											<div class="img-content pie-flex-center">
 												<div>
@@ -554,8 +551,8 @@
 							</div>
 							<!-- tab-pane -->
 							<div role="tabpanel" class="tab-pane fade" id="production-tab-2">
-								<div class="productions-carousel relative flickity-btn-1 prev-next-dots">
-									<div class="figure-m-v-30 carousel-items parag-m-v-10">
+								<div class="productions-carousel relative flickity-btn-1 prev-next-dots flickity-prev-next-custom">
+									<div class="figure-m-v-30 carousel-items parag-m-v-10 catalog-items">
 										<figure>
 											<div class="img-content pie-flex-center">
 												<div>
@@ -775,8 +772,8 @@
 							</div>
 							<!-- tab-pane -->
 							<div role="tabpanel" class="tab-pane fade" id="production-tab-3">
-								<div class="productions-carousel relative flickity-btn-1 prev-next-dots">
-									<div class="figure-m-v-30 carousel-items parag-m-v-10">
+								<div class="productions-carousel relative flickity-btn-1 prev-next-dots flickity-prev-next-custom">
+									<div class="figure-m-v-30 carousel-items parag-m-v-10 catalog-items">
 										<figure>
 											<div class="img-content pie-flex-center">
 												<div>
@@ -996,8 +993,8 @@
 							</div>
 							<!-- tab-pane -->
 							<div role="tabpanel" class="tab-pane fade" id="production-tab-4">
-								<div class="productions-carousel relative flickity-btn-1 prev-next-dots">
-									<div class="figure-m-v-30 carousel-items parag-m-v-10">
+								<div class="productions-carousel relative flickity-btn-1 prev-next-dots flickity-prev-next-custom">
+									<div class="figure-m-v-30 carousel-items parag-m-v-10 catalog-items">
 										<figure>
 											<div class="img-content pie-flex-center">
 												<div>
@@ -1217,8 +1214,8 @@
 							</div>
 							<!-- tab-pane -->
 							<div role="tabpanel" class="tab-pane fade" id="production-tab-5">
-								<div class="productions-carousel relative flickity-btn-1 prev-next-dots">
-									<div class="figure-m-v-30 carousel-items parag-m-v-10">
+								<div class="productions-carousel relative flickity-btn-1 prev-next-dots flickity-prev-next-custom">
+									<div class="figure-m-v-30 carousel-items parag-m-v-10 catalog-items">
 										<figure>
 											<div class="img-content pie-flex-center">
 												<div>
@@ -1438,8 +1435,8 @@
 							</div>
 							<!-- tab-pane -->
 							<div role="tabpanel" class="tab-pane fade" id="production-tab-6">
-								<div class="productions-carousel relative flickity-btn-1 prev-next-dots">
-									<div class="figure-m-v-30 carousel-items parag-m-v-10">
+								<div class="productions-carousel relative flickity-btn-1 prev-next-dots flickity-prev-next-custom">
+									<div class="figure-m-v-30 carousel-items parag-m-v-10 catalog-items">
 										<figure>
 											<div class="img-content pie-flex-center">
 												<div>
@@ -1727,7 +1724,7 @@
 					</div>
 				</div>
 				<!-- short-about -->
-				<div class="short-about color-white text-center p-b-60 p-t-45">
+				<div class="short-about color-white text-center p-b-60 p-t-45 counter-animate-container">
 					<div class="container">
 						<div class="entry-header m-v-30 bolder box-md-3 m-auto p-h-15">
 							<h1 class="font-size-big font-w-7 h-clear"><b>О нас</b></h1>
@@ -1736,7 +1733,7 @@
 						<div class="short-about-items boxes-4 figure-m-v-20">
 							<figure>
 								<div class="counter-content m-v-30">
-									<h1 class="font-size-big font-w-7 h-clear">70000</h1>
+									<h1 class="font-size-big font-w-7 h-clear"><span class="counter-animate">70000</span></h1>
 								</div>
 								<div class="desc-content m-v-30">
 									<p> Тем не менее, медиамикс синхронизирует популярный имидж предприятия.</p>
@@ -1744,7 +1741,7 @@
 							</figure>
 							<figure>
 								<div class="counter-content m-v-30">
-									<h1 class="font-size-big font-w-7 h-clear">40</h1>
+									<h1 class="font-size-big font-w-7 h-clear"><span class="counter-animate">40</span></h1>
 								</div>
 								<div class="desc-content m-v-30">
 									<p>Стратегическое планирование, на первый взгляд, одновременно консолидирует метод изучения рынка.</p>
@@ -1752,7 +1749,7 @@
 							</figure>
 							<figure>
 								<div class="counter-content m-v-30">
-									<h1 class="font-size-big font-w-7 h-clear">60</h1>
+									<h1 class="font-size-big font-w-7 h-clear"><span class="counter-animate">60</span></h1>
 								</div>
 								<div class="desc-content m-v-30">
 									<p>Ребрендинг охватывает презентационный материал, невзирая на действия конкурентов.</p>
@@ -1760,7 +1757,7 @@
 							</figure>
 							<figure>
 								<div class="counter-content m-v-30">
-									<h1 class="font-size-big font-w-7 h-clear">80</h1>
+									<h1 class="font-size-big font-w-7 h-clear"><span class="counter-animate">80</span></h1>
 								</div>
 								<div class="desc-content m-v-30">
 									<p>Соц-дем характеристика аудитории, безусловно, специфицирует медиабизнес.</p>
@@ -1777,28 +1774,243 @@
 							<h1>Новости компании</h1>
 						</div>
 						<div class="short-news-last clearfix radius-3">
-							<div class="img-content col-md-8">
-								<div class="img bs-cover bp-center" style="background-image: url('img/news/short-last.jpg');"></div>
-							</div>
-							<div class="desc-content col-md-4 parag-gray p-h-15 pie-flex-center">
-								<div>
-									<h2>Уникальная спальная система Hilding expanded</h2>
-									<p><small>27 Апреля 2018</small></p>
-									<br>
-									<p>Узнавание бренда специфицирует рекламный клаттер, повышая конкуренцию. Фокусировка, вопреки мнению П.Друкера, парадоксально консолидирует целевой трафик. Бюджет на размещение основан на опыте. Воздействие на потребителя индуцирует конструктивный фактор коммуникации. Баинг и селлинг, анализируя результаты рекламной кампании, поддерживает комплексный нестандартный подход. А вот по мнению аналитиков потребительский рынок нетривиален.</p>
+							<a href="news-article.html" title="">
+								<div class="img-content col-md-8">
+									<div class="img bs-contain bp-left" style="background-image: url('img/news/short-last.jpg');"></div>
 								</div>
-							</div>
+								<div class="desc-content col-md-4 parag-gray parag-m-v-10 p-h-15 pie-flex-center">
+									<div>
+										<h2>Уникальная спальная система Hilding expanded</h2>
+										<p><b>27 Апреля 2018</b></p>
+										<p>Узнавание бренда специфицирует рекламный клаттер, повышая конкуренцию. Фокусировка, вопреки мнению П.Друкера, парадоксально консолидирует целевой трафик. Бюджет на размещение основан на опыте. Воздействие на потребителя индуцирует конструктивный фактор коммуникации. Баинг и селлинг, анализируя результаты рекламной кампании, поддерживает комплексный нестандартный подход. А вот по мнению аналитиков потребительский рынок нетривиален.</p>
+									</div>
+								</div>
+							</a>
 						</div>
-						<div class="short-news-items boxes-3">
-							<figure>
-								<div class="img-content">
-									<div class="img" style="background-image: url('img/news/short-1.jpg');"></div>
-								</div>
-							</figure>
+
+							<div class="short-news-items boxes-4 parag-m-v-10 figure-m-v-30">
+								<figure>
+									<a href="news-article.html" title="">
+										<div class="img-content">
+											<div class="img bs-cover bp-center" style="background-image: url('img/news/short-1.jpg');"></div>
+										</div>
+										<div class="desc-content parag-gray p-h-15 p-v-15">
+											<h4 class="h-clear m-b-15">Новая коллекция матрасов от Jensen</h4>
+											<p><b>27 Апреля 2018</b></p>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+												tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											</p>
+										</div>
+									</a>
+								</figure>
+								<figure>
+									<a href="news-article.html" title="">
+										<div class="img-content">
+											<div class="img bs-cover bp-center" style="background-image: url('img/news/short-2.jpg');"></div>
+										</div>
+										<div class="desc-content parag-gray p-h-15 p-v-15">
+											<h4 class="h-clear m-b-15">Новая коллекция матрасов от Jensen</h4>
+											<p><b>27 Апреля 2018</b></p>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+												tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											</p>
+										</div>
+									</a>
+								</figure>
+								<figure>
+									<a href="news-article.html" title="">
+										<div class="img-content">
+											<div class="img bs-cover bp-center" style="background-image: url('img/news/short-3.jpg');"></div>
+										</div>
+										<div class="desc-content parag-gray p-h-15 p-v-15">
+											<h4 class="h-clear m-b-15">Новая коллекция матрасов от Jensen</h4>
+											<p><b>27 Апреля 2018</b></p>
+											<p>
+												Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+												tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											</p>
+										</div>
+									</a>
+								</figure>
+								<figure class="bnr">
+									<a href="" title="">
+										<div class="img-content">
+											<div class="img bs-cover bp-center" style="background-image: url('img/news/short-banner.jpg');"></div>
+										</div>
+									</a>
+								</figure>
+
+							</div>
+
+					</div>
+				</div>
+				<hr>
+				<!-- short-customers -->
+				<div class="short-customers">
+					<div class="container">
+						<div class="entry-header text-center parag-gray">
+							<h1>Наши матрасы выбрали:</h1>
+							<h3 class="color-gray-1">Лучшие отели и медицинские клиники Узбекистана</h3>
+						</div>
+						<div class="customers-carousel short-customers-items relative flickity-btn-1 prev-next-dots flickity-prev-next-custom">
+							<div class="figure-m-v-30 carousel-items parag-m-v-10 boxes-4 boxes-nosub parag-gray">
+								<figure>
+									<div class="img-content m-b-15">
+										<div class="img bs-contain bp-center" style="background-image: url('img/customers/1.jpg');"></div>
+									</div>
+									<div class="desc-content text-center">
+										<h4 class="m-v-15">Lorem ipsum</h4>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										</p>
+									</div>
+								</figure>
+								<figure>
+									<div class="img-content m-b-15">
+										<div class="img bs-contain bp-center" style="background-image: url('img/customers/2.jpg');"></div>
+									</div>
+									<div class="desc-content text-center">
+										<h4 class="m-v-15">Lorem ipsum</h4>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										</p>
+									</div>
+								</figure>
+								<figure>
+									<div class="img-content m-b-15">
+										<div class="img bs-contain bp-center" style="background-image: url('img/customers/3.jpg');"></div>
+									</div>
+									<div class="desc-content text-center">
+										<h4 class="m-v-15">Lorem ipsum</h4>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										</p>
+									</div>
+								</figure>
+								<figure>
+									<div class="img-content m-b-15">
+										<div class="img bs-contain bp-center" style="background-image: url('img/customers/1.jpg');"></div>
+									</div>
+									<div class="desc-content text-center">
+										<h4 class="m-v-15">Lorem ipsum</h4>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										</p>
+									</div>
+								</figure>
+								<figure>
+									<div class="img-content m-b-15">
+										<div class="img bs-contain bp-center" style="background-image: url('img/customers/4.jpg');"></div>
+									</div>
+									<div class="desc-content text-center">
+										<h4 class="m-v-15">Lorem ipsum</h4>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										</p>
+									</div>
+								</figure>
+
+							</div>
+							<div class="carousel-prev-next">
+								<span class="prev reverse" role="button"><svg viewBox="0 0 100 100"><path d="m 155.5,511.05029 c -14.92812,-2.39991 -25.15735,-7.59291 -35.62063,-18.08328 -20.010278,-20.06208 -24.367553,-48.94152 -11.18912,-74.15998 4.27918,-8.18871 3.4896,-7.32491 85.11756,-93.11894 44.14125,-46.3941 66.05106,-70.10921 65.53977,-70.94004 -0.42243,-0.68643 -30.03595,-31.85928 -65.80782,-69.273 C 108.45042,96.480286 112.98308,101.40536 108.7963,93.394785 95.502188,67.959105 99.833686,38.961875 119.90555,19.023899 132.47133,6.5419303 146.90753,0.52541276 164,0.64682842 c 15.52694,0.11029502 29.74307,5.20335378 40.51825,14.51603758 4.19014,3.621416 169.75189,176.117894 189.1673,197.090774 23.42252,25.30142 22.81842,61.89665 -1.45102,87.9006 -34.30717,36.75907 -182.76162,192.36607 -187.15932,196.17668 -13.03799,11.29743 -33.349,17.32797 -49.57521,14.71937 z" class="arrow" style="transform: scale(0.19)"></path></svg></span>
+								<span class="next" role="button"><svg viewBox="0 0 100 100"><path d="m 155.5,511.05029 c -14.92812,-2.39991 -25.15735,-7.59291 -35.62063,-18.08328 -20.010278,-20.06208 -24.367553,-48.94152 -11.18912,-74.15998 4.27918,-8.18871 3.4896,-7.32491 85.11756,-93.11894 44.14125,-46.3941 66.05106,-70.10921 65.53977,-70.94004 -0.42243,-0.68643 -30.03595,-31.85928 -65.80782,-69.273 C 108.45042,96.480286 112.98308,101.40536 108.7963,93.394785 95.502188,67.959105 99.833686,38.961875 119.90555,19.023899 132.47133,6.5419303 146.90753,0.52541276 164,0.64682842 c 15.52694,0.11029502 29.74307,5.20335378 40.51825,14.51603758 4.19014,3.621416 169.75189,176.117894 189.1673,197.090774 23.42252,25.30142 22.81842,61.89665 -1.45102,87.9006 -34.30717,36.75907 -182.76162,192.36607 -187.15932,196.17668 -13.03799,11.29743 -33.349,17.32797 -49.57521,14.71937 z" class="arrow" style="transform: scale(0.19)"></path></svg></span>
+							</div>
 						</div>
 					</div>
 				</div>
-
+				<hr>
+				<!-- short-partners -->
+				<div class="short-partners">
+					<div class="container">
+						<div class="entry-header text-center">
+							<h1>Наши надёжные партнёры:</h1>
+						</div>
+						<div class="short-customers-items figure-m-v-30 boxes-3">
+							<figure>
+								<div class="img-content bs-contain bp-center p-b-15">
+									<div class="img" style="background-image: url('img/partners/1.jpg'); height: 150px;" alt=""></div>
+								</div>
+								<div class="desc-content text-center">
+									<h4>Lorem ipsum</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									</p>
+								</div>
+							</figure>
+							<figure>
+								<div class="img-content bs-contain bp-center p-b-15">
+									<div class="img" style="background-image: url('img/partners/2.jpg'); height: 150px;" alt=""></div>
+								</div>
+								<div class="desc-content text-center">
+									<h4>Lorem ipsum</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									</p>
+								</div>
+							</figure>
+							<figure>
+								<div class="img-content bs-contain bp-center p-b-15">
+									<div class="img" style="background-image: url('img/partners/3.jpg'); height: 150px;" alt=""></div>
+								</div>
+								<div class="desc-content text-center">
+									<h4>Lorem ipsum</h4>
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+										tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+										quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									</p>
+								</div>
+							</figure>
+						</div>
+					</div>		
+				</div>
+				<!-- short-galleryvideo -->
+				<div class="short-galleryvideo">
+					<div class="container">
+						<div class="entry-header text-center parag-gray">
+							<h1>Раскрутка как анализ рыночных цен</h1>
+						</div>
+						<div class="galleryvideo-carousel relative flickity-btn-1 prev-next-dots flickity-prev-next-custom">
+							<div class="figure-m-v-30 carousel-items parag-m-v-10 boxes-2 boxes-nosub parag-gray">
+								<figure>
+									<div class="video-content">
+										<iframe src="https://www.youtube.com/embed/R28lU1Ua8J0?color=white" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									</div>
+								</figure>
+								<figure>
+									<div class="video-content">
+										<iframe src="https://www.youtube.com/embed/P3AFLxiie6w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									</div>
+								</figure>
+								<figure>
+									<div class="video-content">
+										<iframe src="https://www.youtube.com/embed/vbiDsNLJNLA?color=white" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+									</div>
+								</figure>
+							</div>
+							<div class="carousel-prev-next">
+								<span class="prev reverse" role="button"><svg viewBox="0 0 100 100"><path d="m 155.5,511.05029 c -14.92812,-2.39991 -25.15735,-7.59291 -35.62063,-18.08328 -20.010278,-20.06208 -24.367553,-48.94152 -11.18912,-74.15998 4.27918,-8.18871 3.4896,-7.32491 85.11756,-93.11894 44.14125,-46.3941 66.05106,-70.10921 65.53977,-70.94004 -0.42243,-0.68643 -30.03595,-31.85928 -65.80782,-69.273 C 108.45042,96.480286 112.98308,101.40536 108.7963,93.394785 95.502188,67.959105 99.833686,38.961875 119.90555,19.023899 132.47133,6.5419303 146.90753,0.52541276 164,0.64682842 c 15.52694,0.11029502 29.74307,5.20335378 40.51825,14.51603758 4.19014,3.621416 169.75189,176.117894 189.1673,197.090774 23.42252,25.30142 22.81842,61.89665 -1.45102,87.9006 -34.30717,36.75907 -182.76162,192.36607 -187.15932,196.17668 -13.03799,11.29743 -33.349,17.32797 -49.57521,14.71937 z" class="arrow" style="transform: scale(0.19)"></path></svg></span>
+								<span class="next" role="button"><svg viewBox="0 0 100 100"><path d="m 155.5,511.05029 c -14.92812,-2.39991 -25.15735,-7.59291 -35.62063,-18.08328 -20.010278,-20.06208 -24.367553,-48.94152 -11.18912,-74.15998 4.27918,-8.18871 3.4896,-7.32491 85.11756,-93.11894 44.14125,-46.3941 66.05106,-70.10921 65.53977,-70.94004 -0.42243,-0.68643 -30.03595,-31.85928 -65.80782,-69.273 C 108.45042,96.480286 112.98308,101.40536 108.7963,93.394785 95.502188,67.959105 99.833686,38.961875 119.90555,19.023899 132.47133,6.5419303 146.90753,0.52541276 164,0.64682842 c 15.52694,0.11029502 29.74307,5.20335378 40.51825,14.51603758 4.19014,3.621416 169.75189,176.117894 189.1673,197.090774 23.42252,25.30142 22.81842,61.89665 -1.45102,87.9006 -34.30717,36.75907 -182.76162,192.36607 -187.15932,196.17668 -13.03799,11.29743 -33.349,17.32797 -49.57521,14.71937 z" class="arrow" style="transform: scale(0.19)"></path></svg></span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- ./MAIN-CONTENT -->
 		</main>
@@ -1806,39 +2018,33 @@
 		<!-- FOOTER -->
 		<footer id="footer" class="container-fluid text-center-sm bg-color-2">
 			<div class="container">
-				<div class="footer-content clearfix color-white">
-					<div class="footer-logo col-md-3 m-v-30">
-						<div class="img-content filter-white">
-							<a href="index.html" title="">
-								<img src="img/logo.png" alt="">
-							</a>
-						</div>
-					</div>
-					<div class="footer-menu col-md-9 m-v-35 hidden-xs hidden-sm hover-color-1 hover-underline">
+				<div class="footer-content clearfix color-white p-t-5">
+					<div class="footer-socicons col-md-2 m-v-15 text-left-md hover-color-1">
 						<ul class="list-inline">
-							<li><a href="delivery.html" title="">Доставка</a></li>
-							<li><a href="about.html" title="">О компании</a></li>
-							<li><a href="contacts.html" title="">Контакты</a></li>
-							<li><a href="reviews.html" title="">Отзывы</a></li>
+							<li><a href="" title=""><i class="fa fa-paper-plane"></i></a></li>
+							<li><a href="" title=""><i class="fa fa-facebook"></i></a></li>
+							<li><a href="" title=""><i class="fa fa-instagram"></i></a></li>
+							<li><a href="" title=""><i class="fa fa-whatsapp"></i></a></li>
 						</ul>
 					</div>
-					<div class="footer-feedback m-v-30 col-md-12">
-						<div class="col-md-3 footer-feedback-info">
-							<p><b>Контактная информация: </b></p>
-							<p>г. Ташкент улица Дагбитская 24/5</p>
-						</div>
-						<div class="footer-socicons col-md-4 m-v-10 text-center hover-color-1">
-							<ul class="list-inline">
-								<li><a href="" title=""><i class="ls-facebook"></i></a></li>
-								<li><a href="" title=""><i class="ls-instagram"></i></a></li>
-								<li><a href="" title=""><i class="ls-telegram"></i></a></li>
-							</ul>
-						</div>
-						<div class="payicons col-md-5 text-right-md li-m-default">
+					<div class="footer-menu col-md-6 text-center m-v-15 hidden-xs hidden-sm hover-color-1">
+						<ul class="list-inline">
+							<li class="active"><a href="delivery.html" title="">Адреса салонов</a></li>
+							<li><a href="shares.html" title="">Акции</a></li>
+							<li><a href="company.html" title="">Компания</a></li>
+							<li><a href="delivery.html" title="">Доставка</a></li>
+							<li><a href="partners-shares.html" title="">Партнерам</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 footer-feedback">
+						<p class="m-v-15 col-md-7 hover-color-1"><a href="tel:+99897774444" title=""><big>+998 97 <big>777-44-44</big></big></a></p>
+						<span class="btn-def col-md-5 radius-2 m-v-10 m-auto"><a href="#modal-feedback" class="p-v-10 p-h-5" title="" data-toggle="modal"><small><b>Обратный звонок</b></small></a></span>
+					</div>
+					<div class="col-md-12 m-v-15 payicons">
+						<div class="text-center li-m-default">
 							<ul class="list-inline">
 								<li><a href="" title=""><img src="img/other/logo-click.png" alt=""></a></li>
 								<li><a href="" title=""><img src="img/other/logo-payme.png" alt=""></a></li>
-								<li><a href="" title=""><img src="img/other/logo-uzcard.png" alt=""></a></li>
 							</ul>
 						</div>
 					</div>

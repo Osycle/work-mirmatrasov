@@ -49,7 +49,7 @@ gulp.task('scripts', () =>
 	return gulp.src([
 			app+'/js/jquery.min.js',
 			app+'/js/skrollr.min.js',
-			app+'/js/smoothscroll.js',
+			//app+'/js/smoothscroll.js',
 			app+'/js/bootstrap.min.js',
 			//app+'/js/TweenMax.min.js',
 			//app+'/js/EasePack.min.js',
