@@ -5,7 +5,7 @@
 
 
 
-    // AOS
+    /*AOS*/
     AOS.init({
       offset: 100,
       once: true,
@@ -14,7 +14,8 @@
     });
     setTimeout(function() { AOS.refresh(); }, 1);
 
-    //SELECT2
+
+    /*SELECT2*/
     if ( $(".js-select").length )
       $(".js-select").select2({
         placeholder: "Выберите...",
@@ -24,13 +25,15 @@
     $(".js-select.search-hide").select2({
       minimumResultsForSearch: Infinity
     });
-    // FANCYBOX
+
+
+    /*FANCYBOX*/
     if ($("[data-fancybox='gallery']").length != 0)
       $("[data-fancybox='gallery']").fancybox({
         afterShow: function(instance, current) {},
         transitionEffect: "zoom-in-out"
       });
-    // ELEVATEZOOM
+    /*ELEVATEZOOM*/
     if ( !checkSm() && $("[data-zoom-image]:not([group])").length )
       var x = $("[data-zoom-image]:not([group])").elevateZoom({
         scrollZoom: true,
@@ -80,7 +83,7 @@
       ]
     }, {});
 
-    //FLIKITY
+    /*FLIKITY*/
     function flickityPrevNext(className) {
       var carouselWrapper = $(className);
       for (var i = 0; i < carouselWrapper.length; i++) {
@@ -256,24 +259,26 @@
               prevNextButtons: false,
               cellAlign: "center",
               bgLazyLoad: 1,
-              friction: 1,
-              selectedAttraction: 1,
-              initialIndex: 0,
+              //friction: 1,
+              //selectedAttraction: 1,
+              initialIndex: 1,
               draggable: true,
               contain: true,
-              pageDots: false
+              pageDots: !checkSm()
             });
           var flkty = crs.data("flickity");
 
           $(carouselNav).eq(i).flickity({
             imagesLoaded: true,
-            initialIndex: 0,
+            initialIndex: 1,
             asNavFor: $(carouselMain)[i],
             prevNextButtons: true,
             draggable: true,
+            percentPosition: true,
+            //wrapAround: true,
             cellAlign: "center",
             adaptiveHeight: true,
-            contain: true,
+            //contain: true,
             pageDots: false
           });
         }
