@@ -43,7 +43,7 @@
 	margin-left: -+($mrow)+%;
 	margin-right: -+( $mrow )+%;
 //100/$item
-	#{$tag}{
+	#{$tag}, .boxes-cell{
 		margin-left:  ($mrow)+%;
 		margin-right:  ($mrow)+%;
 		//width: ( ($width/$item)+( $item / ( $item * 10) ) )+%;
@@ -324,7 +324,7 @@
 $header-top-height: 60px; 
 $header-middle-height: 90px; 
 $header-bottom-height: 50px;
-$header-min-menu: 100px;
+$header-min-menu: 70px;
 #header{
 	top: 0;
 	z-index: 110;
@@ -679,7 +679,7 @@ header{
 	position: fixed;
 	top: 0;
   height: $header-min-menu;
-  padding: 10px 25px;
+  padding: 0 25px;
 	z-index: 100;
 	color: white;
 	box-shadow: 0 0 20px 0 black;
@@ -693,11 +693,14 @@ header{
     opacity: 0.05;
 	}
 	.min-menu-logo{
-		padding: 25px 0;
-		width: 150px;
+		padding: 20px 0;
+		width: 100%;
 	}
 	.min-menu-bar{
-		padding: 10px 0;
+		padding: 5px 0;
+		.bar{
+			transform: scale(0.8);
+		}
 	}
 }
 .mm-opening{
@@ -1003,7 +1006,7 @@ h4{
 h5{
 	font-weight: 500;
 	line-height: 110%;
-	font-size: em(14, 16);
+	font-size: em(15, 16);
 	font-family: $font-family-1;
 }
 
@@ -1071,7 +1074,9 @@ body, #page{
 		//width: 20%;
 	}
 }
-
+.bg-wrapper{
+	@extend .clearfix;
+}
 a[target="_blank"]{
 	color: $color-1;
 	text-decoration: underline;
@@ -1250,7 +1255,10 @@ a[target="_blank"]{
 
 
 
-
+.border-style-1{
+	border-radius: 15px;
+	border: 1px solid $color-gray-3;
+}
 
 //--slider
 .bnr-carousel{
@@ -1353,8 +1361,7 @@ a[target="_blank"]{
 .catalog-items{
 	figure{
 		position: relative;
-		border-radius:10px;
-		border: 1px solid $color-gray-3;
+		@extend .border-style-1;
 		display: inline-block;
 		padding-bottom: 10px;
 		h5{
@@ -1423,8 +1430,7 @@ a[target="_blank"]{
 }
 .short-news-items{
 	figure{
-		border-radius: 15px;
-		border: 1px solid $color-gray-3;
+		@extend .border-style-1;
 		overflow: hidden;
 		height: 360px;
 		.desc-content{
@@ -1511,6 +1517,15 @@ a[target="_blank"]{
 
 
 
+
+
+
+
+
+
+
+
+
 /* about */
 .about{
 
@@ -1522,6 +1537,12 @@ a[target="_blank"]{
 	background-position: top;
 	background-size: cover;
 }
+
+
+
+
+
+
 
 
 /* whywe */
@@ -1558,6 +1579,17 @@ a[target="_blank"]{
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
 
 /* productons */
 //.catalog-sort-filter
@@ -1681,19 +1713,75 @@ a[target="_blank"]{
 //short-reviews
 .short-reviews{
 	.reviews-item{
-		border-radius: 15px;
-		border: 1px solid $color-gray-3;
+		@extend .border-style-1;
 		padding: 15px 20px;
 		margin: 30px 0;
 	}	
 }
 .short-reviews-form{
-
 }
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* news */
+.news-items{
+	figure{
+		@extend .border-style-1;
+		transition: all 0.3s ease;
+		box-shadow: 0 0 0 rgba(black, 0);
+		.img{
+			background-position: center;
+			background-size: contain;
+			height: 200px;
+		}
+		&:hover{
+			transform: translateY(-3px);
+			box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.8);
+		}
+		.desc-content{
+			padding: 5px 20px;
+		}
+	}
+}
+
+
+/* short-franchise */
+.short-franchise{
+	background-position:top;
+	background-size: cover;
+	.boxes-cell{
+		margin-top:30px;
+		margin-bottom:30px;
+	}
+}
+
+
+/* addresses */
+.addresses-table{
+	table{
+		th{
+			border: 0;
+		}
+		td{
+			border: 1px solid black;
+			a{
+				font-weight: 600;
+				color: $color-1;
+			}
+		}
+	}
+}
 
 
 

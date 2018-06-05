@@ -5851,11 +5851,11 @@ tbody.collapse.in {
     border-left-color: #fff;
     bottom: -10px; }
 
-.clearfix:before, .modal-body:before, .form-modal .modal-body:before, .clearfix:after, .modal-body:after, .form-modal .modal-body:after {
+.clearfix:before, .modal-body:before, .form-modal .modal-body:before, .bg-wrapper:before, .clearfix:after, .modal-body:after, .form-modal .modal-body:after, .bg-wrapper:after {
   content: " ";
   display: table; }
 
-.clearfix:after, .modal-body:after, .form-modal .modal-body:after {
+.clearfix:after, .modal-body:after, .form-modal .modal-body:after, .bg-wrapper:after {
   clear: both; }
 
 .center-block {
@@ -11747,7 +11747,7 @@ http://flickity.metafizzy.co
   margin-right: 0%; }
   .boxes-1 * {
     letter-spacing: 0; }
-  .boxes-1 figure {
+  .boxes-1 figure, .boxes-1 .boxes-cell {
     margin-left: 0%;
     margin-right: 0%;
     width: 100%; }
@@ -11758,7 +11758,7 @@ http://flickity.metafizzy.co
   margin-right: -1.25%; }
   .boxes-2 * {
     letter-spacing: 0; }
-  .boxes-2 figure {
+  .boxes-2 figure, .boxes-2 .boxes-cell {
     margin-left: 1.25%;
     margin-right: 1.25%;
     width: 47.5%; }
@@ -11769,7 +11769,7 @@ http://flickity.metafizzy.co
   margin-right: -1.66667%; }
   .boxes-3 * {
     letter-spacing: 0; }
-  .boxes-3 figure {
+  .boxes-3 figure, .boxes-3 .boxes-cell {
     margin-left: 1.66667%;
     margin-right: 1.66667%;
     width: 30%; }
@@ -11780,7 +11780,7 @@ http://flickity.metafizzy.co
   margin-right: -1.25%; }
   .boxes-4 * {
     letter-spacing: 0; }
-  .boxes-4 figure {
+  .boxes-4 figure, .boxes-4 .boxes-cell {
     margin-left: 1.25%;
     margin-right: 1.25%;
     width: 22.5%; }
@@ -11791,7 +11791,7 @@ http://flickity.metafizzy.co
   margin-right: -1%; }
   .boxes-5 * {
     letter-spacing: 0; }
-  .boxes-5 figure {
+  .boxes-5 figure, .boxes-5 .boxes-cell {
     margin-left: 1%;
     margin-right: 1%;
     width: 18%; }
@@ -11802,7 +11802,7 @@ http://flickity.metafizzy.co
   margin-right: -0.83333%; }
   .boxes-6 * {
     letter-spacing: 0; }
-  .boxes-6 figure {
+  .boxes-6 figure, .boxes-6 .boxes-cell {
     margin-left: 0.83333%;
     margin-right: 0.83333%;
     width: 15%; }
@@ -11814,7 +11814,7 @@ http://flickity.metafizzy.co
     margin-right: -1.66667%; }
     .boxes-6 *, .boxes-5 *, .boxes-4 * {
       letter-spacing: 0; }
-    .boxes-6 figure, .boxes-5 figure, .boxes-4 figure {
+    .boxes-6 figure, .boxes-6 .boxes-cell, .boxes-5 figure, .boxes-5 .boxes-cell, .boxes-4 figure, .boxes-4 .boxes-cell {
       margin-left: 1.66667%;
       margin-right: 1.66667%;
       width: 30%; } }
@@ -11826,7 +11826,7 @@ http://flickity.metafizzy.co
     margin-right: -2.5%; }
     .boxes-4 * {
       letter-spacing: 0; }
-    .boxes-4 figure {
+    .boxes-4 figure, .boxes-4 .boxes-cell {
       margin-left: 2.5%;
       margin-right: 2.5%;
       width: 45%; } }
@@ -11838,7 +11838,7 @@ http://flickity.metafizzy.co
     margin-right: -2.5%; }
     .boxes-6 *, .boxes-5 *, .boxes-4 *, .boxes-3 * {
       letter-spacing: 0; }
-    .boxes-6 figure, .boxes-5 figure, .boxes-4 figure, .boxes-3 figure {
+    .boxes-6 figure, .boxes-6 .boxes-cell, .boxes-5 figure, .boxes-5 .boxes-cell, .boxes-4 figure, .boxes-4 .boxes-cell, .boxes-3 figure, .boxes-3 .boxes-cell {
       margin-left: 2.5%;
       margin-right: 2.5%;
       width: 45%; } }
@@ -11850,7 +11850,7 @@ http://flickity.metafizzy.co
     margin-right: 0%; }
     .boxes-6 *, .boxes-5 *, .boxes-4 *, .boxes-3 *, .boxes-2 * {
       letter-spacing: 0; }
-    .boxes-6 figure, .boxes-5 figure, .boxes-4 figure, .boxes-3 figure, .boxes-2 figure {
+    .boxes-6 figure, .boxes-6 .boxes-cell, .boxes-5 figure, .boxes-5 .boxes-cell, .boxes-4 figure, .boxes-4 .boxes-cell, .boxes-3 figure, .boxes-3 .boxes-cell, .boxes-2 figure, .boxes-2 .boxes-cell {
       margin-left: 0%;
       margin-right: 0%;
       width: 100%; } }
@@ -12315,8 +12315,8 @@ header * {
   transform: none;
   position: fixed;
   top: 0;
-  height: 100px;
-  padding: 10px 25px;
+  height: 70px;
+  padding: 0 25px;
   z-index: 100;
   color: white;
   -webkit-box-shadow: 0 0 20px 0 black;
@@ -12328,10 +12328,14 @@ header * {
     background-position: left;
     opacity: 0.05; }
   .min-menu-header .min-menu-logo {
-    padding: 25px 0;
-    width: 150px; }
+    padding: 20px 0;
+    width: 100%; }
   .min-menu-header .min-menu-bar {
-    padding: 10px 0; }
+    padding: 5px 0; }
+    .min-menu-header .min-menu-bar .bar {
+      -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+      transform: scale(0.8); }
 
 .mm-opening .min-menu-header {
   opacity: 0;
@@ -12566,7 +12570,7 @@ h4 {
 h5 {
   font-weight: 500;
   line-height: 110%;
-  font-size: 0.875em;
+  font-size: 0.9375em;
   font-family: "Gotham Pro"; }
 
 blockquote {
@@ -12694,6 +12698,11 @@ a[target="_blank"] {
 /*
 					-------MAIN-------
 */
+.border-style-1, .catalog-items figure, .short-news-items figure, .short-reviews .reviews-item, .news-items figure {
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  border: 1px solid rgba(158, 158, 158, 0.3); }
+
 .bnr-carousel .carousel-items figure {
   height: 450px; }
   .bnr-carousel .carousel-items figure .img {
@@ -12762,7 +12771,7 @@ a[target="_blank"] {
   margin-right: -1.25%; }
   .productions-tabs .flickity-slider * {
     letter-spacing: 0; }
-  .productions-tabs .flickity-slider figure {
+  .productions-tabs .flickity-slider figure, .productions-tabs .flickity-slider .boxes-cell {
     margin-left: 1.25%;
     margin-right: 1.25%;
     width: 22.5%; }
@@ -12773,7 +12782,7 @@ a[target="_blank"] {
       margin-right: 0%; }
       .productions-tabs .flickity-slider * {
         letter-spacing: 0; }
-      .productions-tabs .flickity-slider figure {
+      .productions-tabs .flickity-slider figure, .productions-tabs .flickity-slider .boxes-cell {
         margin-left: 0%;
         margin-right: 0%;
         width: 100%; } }
@@ -12785,9 +12794,6 @@ a[target="_blank"] {
 
 .catalog-items figure {
   position: relative;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(158, 158, 158, 0.3);
   display: inline-block;
   padding-bottom: 10px; }
   .catalog-items figure h5 {
@@ -12832,9 +12838,6 @@ a[target="_blank"] {
     min-height: 350px; }
 
 .short-news-items figure {
-  -webkit-border-radius: 15px;
-  border-radius: 15px;
-  border: 1px solid rgba(158, 158, 158, 0.3);
   overflow: hidden;
   height: 360px; }
   .short-news-items figure .desc-content {
@@ -13017,11 +13020,48 @@ a[target="_blank"] {
       font-weight: 600; }
 
 .short-reviews .reviews-item {
-  -webkit-border-radius: 15px;
-  border-radius: 15px;
-  border: 1px solid rgba(158, 158, 158, 0.3);
   padding: 15px 20px;
   margin: 30px 0; }
+
+/* news */
+.news-items figure {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent; }
+  .news-items figure .img {
+    background-position: center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    height: 200px; }
+  .news-items figure:hover {
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 4px 14px -6px rgba(0, 0, 0, 0.8); }
+  .news-items figure .desc-content {
+    padding: 5px 20px; }
+
+/* short-franchise */
+.short-franchise {
+  background-position: top;
+  -webkit-background-size: cover;
+  background-size: cover; }
+  .short-franchise .boxes-cell {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+
+/* addresses */
+.addresses-table table th {
+  border: 0; }
+
+.addresses-table table td {
+  border: 1px solid black; }
+  .addresses-table table td a {
+    font-weight: 600;
+    color: #03A9F5; }
 
 /*
 										 ---FOOTER---

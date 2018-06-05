@@ -97,7 +97,6 @@
         var that = this;
         btnNext.on("click", carousel, function(e) {
           e.data.flickity("next", true);
-          console.log( e.data )
         });
 
         btnPrev.on("click", carousel, function(e) {
