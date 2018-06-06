@@ -25,8 +25,19 @@
     $(".js-select.search-hide").select2({
       minimumResultsForSearch: Infinity
     });
+    /*BOOTSTRAP TOOLTIP*/
+    $('[data-toggle="tooltip"]').tooltip({
+      animated: true,
+      placement: 'bottom',
+      html: true
+    });
+    /*rating appraise*/
+    $("[rating-appraise]").hover(function(){
+      console.log(this)
 
+    },function(){
 
+    });
     /*FANCYBOX*/
     if ($("[data-fancybox='gallery']").length != 0)
       $("[data-fancybox='gallery']").fancybox({
