@@ -703,6 +703,9 @@ header{
 		}
 	}
 }
+.mm-navbars-top{
+	background-color: #333;
+}
 .mm-opening{
 	.min-menu-header{
 		opacity: 0 ;
@@ -1267,14 +1270,20 @@ a[target="_blank"]{
 	border: 1px solid $color-gray-3;
 }
 .rating-appraise{
-	font-size: 0;
+	//	font-size: 0;
 	li{
 		margin-left: 0;
 		transition: all 0.2s linear;
-	}
-	.fa-star{
-		font-size: 18px;
-		transition: all 0.4s linear;
+		.fa-star{
+			color: #ea2e49;
+			font-size: 18px;
+			transition: all 0.4s linear;
+		}
+		&.cheсked ~ li{
+			.fa-star{
+				color: #9e9e9e !important;
+			}
+		}
 	}
 	.star-list{
 		&:hover{
@@ -1283,16 +1292,16 @@ a[target="_blank"]{
 			}
 		}
 	}
-	li{
-		&:hover{
-			transform: scale(1.2);
-			& ~ *{
-				.fa-star{
-					color: #9e9e9e !important;
-				}
-			}
-		}
-	}
+	// li{
+	// 	&:hover{
+	// 		transform: scale(1.2);
+	// 		& ~ *{
+	// 			.fa-star{
+	// 				color: #9e9e9e !important;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 //--slider
 .bnr-carousel{

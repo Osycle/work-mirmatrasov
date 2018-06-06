@@ -12337,6 +12337,9 @@ header * {
       -ms-transform: scale(0.8);
       transform: scale(0.8); }
 
+.mm-navbars-top {
+  background-color: #333; }
+
 .mm-opening .min-menu-header {
   opacity: 0;
   top: -200px; }
@@ -12707,26 +12710,22 @@ a[target="_blank"] {
   border-radius: 15px;
   border: 1px solid rgba(158, 158, 158, 0.3); }
 
-.rating-appraise {
-  font-size: 0; }
-  .rating-appraise li {
-    margin-left: 0;
-    -webkit-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear; }
-  .rating-appraise .fa-star {
+.rating-appraise li {
+  margin-left: 0;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear; }
+  .rating-appraise li .fa-star {
+    color: #ea2e49;
     font-size: 18px;
     -webkit-transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
     transition: all 0.4s linear; }
-  .rating-appraise .star-list:hover .fa-star {
-    color: #ea2e49; }
-  .rating-appraise li:hover {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2); }
-    .rating-appraise li:hover ~ * .fa-star {
-      color: #9e9e9e !important; }
+  .rating-appraise li.cheсked ~ li .fa-star {
+    color: #9e9e9e !important; }
+
+.rating-appraise .star-list:hover .fa-star {
+  color: #ea2e49; }
 
 .bnr-carousel .carousel-items figure {
   height: 450px; }

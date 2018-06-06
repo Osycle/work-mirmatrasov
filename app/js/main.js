@@ -32,11 +32,9 @@
       html: true
     });
     /*rating appraise*/
-    $("[rating-appraise]").hover(function(){
-      console.log(this)
-
-    },function(){
-
+    $(document).on("click", ".rating-appraise li", function(){
+      $(this).siblings().removeClass("cheсked")
+      $(this).addClass("cheсked");
     });
     /*FANCYBOX*/
     if ($("[data-fancybox='gallery']").length != 0)
