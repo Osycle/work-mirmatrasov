@@ -12933,6 +12933,10 @@ a[target="_blank"] {
   background-position: top;
   -webkit-background-size: cover;
   background-size: cover; }
+  .bnr-page h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.15em; }
 
 /* whywe */
 .whywe {
