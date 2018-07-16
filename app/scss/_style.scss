@@ -355,6 +355,9 @@ header{
 	transition: all 0.3s ease-out 0.0s, visibility 0.0s ease 0s;
 	transform: inherit;transform: unset;
 }
+.header-top-content{
+	background-color: #4B2F48;
+}
 .header-middle-content{
 	border-bottom: 1px solid #d1d1d1;
 	.btn-def{
@@ -489,61 +492,62 @@ header{
 			transition: all 0.8s ease;
 		}
 	}
-
-
-
-
-	ul[class*="sub"]{
-		visibility:  hidden;
-		position: absolute;
-		transition: opacity 0.3s ease-in-out,
-								all 0.3s ease-in-out;
-		opacity: 0;
-		font-size: 0.9em;
-		font-weight: 500;
-		z-index: 2;
-		color: inherit;
-		background-color:  white;
-		
-	}
-	.sub-menu-1{
-		white-space: normal;
-		border-radius: 10px;
-		padding: 3px 5px;
-		//width: 200px;
-		transform: matrix(1,0,0,1,0,7) scale(0);
-		transform-origin: 40% 0;
-		li{
-			font-size: em(15, 16);
-			text-align: left;
-			width: 100%;
-			&:hover{
-				.sub-menu-2{
-					opacity: 1;
-					visibility: visible;
-					transform: none;transform: unset; 
-    			
-				}
-			}
-		}
-		a{
-			display: block;
-			transition: all 0.3s ease-in-out;
-			color: $color-gray-1;
-			padding: 10px 5px;
-			white-space: nowrap;
-			&:hover{
-				color: $color-1;
-			}
-		}
-
-	}
-	.sub-menu-2{
-		left: 100%;
-		margin-top: -40px;
-		transform: matrix(1,0,0,1, 10,0);
-	}
 }
+
+
+
+
+ul[class*="sub"]{
+	visibility:  hidden;
+	position: absolute;
+	transition: opacity 0.3s ease-in-out,
+							all 0.3s ease-in-out;
+	opacity: 0;
+	font-size: 0.9em;
+	font-weight: 500;
+	z-index: 2;
+	color: inherit;
+	background-color:  white;
+	
+}
+.sub-menu-1{
+	white-space: normal;
+	border-radius: 10px;
+	padding: 3px 5px;
+	//width: 200px;
+	transform: matrix(1,0,0,1,0,7) scale(0);
+	transform-origin: 40% 0;
+	li{
+		font-size: em(15, 16);
+		text-align: left;
+		width: 100%;
+		&:hover{
+			.sub-menu-2{
+				opacity: 1;
+				visibility: visible;
+				transform: none;transform: unset; 
+  			
+			}
+		}
+	}
+	a{
+		display: block;
+		transition: all 0.3s ease-in-out;
+		color: $color-gray-1;
+		padding: 10px 5px;
+		white-space: nowrap;
+		&:hover{
+			color: $color-1;
+		}
+	}
+
+}
+.sub-menu-2{
+	left: 100%;
+	margin-top: -40px;
+	transform: matrix(1,0,0,1, 10,0);
+}
+
 
 
 
@@ -1601,7 +1605,7 @@ a[target="_blank"]{
 
 /* whywe */
 .whywe{
-	background-color: #452A6D;
+	background-color: #4B2F48;
 	@media ( min-width:992px ) {		
 		.text-content{
 			column-count: 2;
@@ -1851,6 +1855,7 @@ a[target="_blank"]{
 #footer{
 	position: relative;
 	color: white;
+	background-color:#4B2F48;
 	min-height: 150px;
 	line-height: 170%;
 	background-repeat: no-repeat;

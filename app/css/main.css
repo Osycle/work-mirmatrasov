@@ -12047,6 +12047,9 @@ header * {
   -ms-transform: unset;
   transform: unset; }
 
+.header-top-content {
+  background-color: #4B2F48; }
+
 .header-middle-content {
   border-bottom: 1px solid #d1d1d1; }
   .header-middle-content .btn-def a {
@@ -12161,58 +12164,61 @@ header * {
       -webkit-transition: all 0.8s ease;
       -o-transition: all 0.8s ease;
       transition: all 0.8s ease; }
-  .menu ul[class*="sub"] {
-    visibility: hidden;
-    position: absolute;
-    -webkit-transition: opacity 0.3s ease-in-out, all 0.3s ease-in-out;
-    -o-transition: opacity 0.3s ease-in-out, all 0.3s ease-in-out;
-    transition: opacity 0.3s ease-in-out, all 0.3s ease-in-out;
-    opacity: 0;
-    font-size: 0.9em;
-    font-weight: 500;
-    z-index: 2;
-    color: inherit;
-    background-color: white; }
-  .menu .sub-menu-1 {
-    white-space: normal;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    padding: 3px 5px;
-    -webkit-transform: matrix(1, 0, 0, 1, 0, 7) scale(0);
-    -ms-transform: matrix(1, 0, 0, 1, 0, 7) scale(0);
-    transform: matrix(1, 0, 0, 1, 0, 7) scale(0);
-    -webkit-transform-origin: 40% 0;
-    -ms-transform-origin: 40% 0;
-    transform-origin: 40% 0; }
-    .menu .sub-menu-1 li {
-      font-size: 0.9375em;
-      text-align: left;
-      width: 100%; }
-      .menu .sub-menu-1 li:hover .sub-menu-2 {
-        opacity: 1;
-        visibility: visible;
-        -webkit-transform: none;
-        -ms-transform: none;
-        transform: none;
-        -webkit-transform: unset;
-        -ms-transform: unset;
-        transform: unset; }
-    .menu .sub-menu-1 a {
-      display: block;
-      -webkit-transition: all 0.3s ease-in-out;
-      -o-transition: all 0.3s ease-in-out;
-      transition: all 0.3s ease-in-out;
-      color: #9e9e9e;
-      padding: 10px 5px;
-      white-space: nowrap; }
-      .menu .sub-menu-1 a:hover {
-        color: #03A9F5; }
-  .menu .sub-menu-2 {
-    left: 100%;
-    margin-top: -40px;
-    -webkit-transform: matrix(1, 0, 0, 1, 10, 0);
-    -ms-transform: matrix(1, 0, 0, 1, 10, 0);
-    transform: matrix(1, 0, 0, 1, 10, 0); }
+
+ul[class*="sub"] {
+  visibility: hidden;
+  position: absolute;
+  -webkit-transition: opacity 0.3s ease-in-out, all 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, all 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, all 0.3s ease-in-out;
+  opacity: 0;
+  font-size: 0.9em;
+  font-weight: 500;
+  z-index: 2;
+  color: inherit;
+  background-color: white; }
+
+.sub-menu-1 {
+  white-space: normal;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 3px 5px;
+  -webkit-transform: matrix(1, 0, 0, 1, 0, 7) scale(0);
+  -ms-transform: matrix(1, 0, 0, 1, 0, 7) scale(0);
+  transform: matrix(1, 0, 0, 1, 0, 7) scale(0);
+  -webkit-transform-origin: 40% 0;
+  -ms-transform-origin: 40% 0;
+  transform-origin: 40% 0; }
+  .sub-menu-1 li {
+    font-size: 0.9375em;
+    text-align: left;
+    width: 100%; }
+    .sub-menu-1 li:hover .sub-menu-2 {
+      opacity: 1;
+      visibility: visible;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+      -webkit-transform: unset;
+      -ms-transform: unset;
+      transform: unset; }
+  .sub-menu-1 a {
+    display: block;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: #9e9e9e;
+    padding: 10px 5px;
+    white-space: nowrap; }
+    .sub-menu-1 a:hover {
+      color: #03A9F5; }
+
+.sub-menu-2 {
+  left: 100%;
+  margin-top: -40px;
+  -webkit-transform: matrix(1, 0, 0, 1, 10, 0);
+  -ms-transform: matrix(1, 0, 0, 1, 10, 0);
+  transform: matrix(1, 0, 0, 1, 10, 0); }
 
 .menu-bottom {
   height: 50px; }
@@ -12940,7 +12946,7 @@ a[target="_blank"] {
 
 /* whywe */
 .whywe {
-  background-color: #452A6D; }
+  background-color: #4B2F48; }
   @media (min-width: 992px) {
     .whywe .text-content {
       -webkit-column-count: 2;
@@ -13102,6 +13108,7 @@ a[target="_blank"] {
 #footer {
   position: relative;
   color: white;
+  background-color: #4B2F48;
   min-height: 150px;
   line-height: 170%;
   background-repeat: no-repeat;
