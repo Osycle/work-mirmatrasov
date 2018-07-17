@@ -12736,7 +12736,7 @@ a[target="_blank"] {
 .bnr-carousel .carousel-items figure {
   height: 450px; }
   .bnr-carousel .carousel-items figure .img {
-    opacity: 0.3;
+    opacity: 1;
     width: 100%;
     height: 100%;
     position: absolute; }
@@ -12748,7 +12748,7 @@ a[target="_blank"] {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease; }
   .bnr-carousel .carousel-items figure.is-selected .img {
-    opacity: 0.3; }
+    opacity: 1; }
   .bnr-carousel .carousel-items figure.is-selected .desc-content {
     opacity: 1; }
 
