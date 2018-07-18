@@ -233,6 +233,11 @@ html{
 	li{
 		vertical-align: baseline;
 	}
+	@media (max-width:991px) {
+		li{
+			display: block;
+		}
+	}
 }
 
 
