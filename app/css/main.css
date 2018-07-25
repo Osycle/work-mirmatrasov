@@ -6158,9 +6158,9 @@ html {
 [class*='list-style'].outside li {
   list-style-position: outside; }
 
-.list-style-1 ul:not([class]), .main-content .entry-content ul:not([class]) {
+.list-style-1 ul:not([class]), .main-content ul:not([class]) {
   position: relative; }
-  .list-style-1 ul:not([class]) li, .main-content .entry-content ul:not([class]) li {
+  .list-style-1 ul:not([class]) li, .main-content ul:not([class]) li {
     list-style: none;
     list-style-position: inside;
     list-style-image: url("../img/icons/list-icon.png");
@@ -12008,7 +12008,6 @@ http://flickity.metafizzy.co
   right: 0px; }
 
 .bg-texture-1, body, #page {
-  background: url("../img/bg/texture-1.jpg");
   background-position: 0 10px;
   -webkit-background-size: 160px 160px;
   background-size: 160px; }
@@ -12649,6 +12648,8 @@ a[target="_blank"] {
   position: relative; }
   .main-slider > .container {
     position: relative; }
+  .main-slider li {
+    list-style-image: none !important; }
   @media (max-width: 991px) {
     .main-slider {
       overflow: hidden;
@@ -12764,6 +12765,10 @@ a[target="_blank"] {
 @media (max-width: 991px) {
   .bnr-carousel .carousel-items figure {
     height: 300px; } }
+
+.bnr-carousel .flickity-page-dots {
+  margin-top: -30px;
+  margin-bottom: 10px; }
 
 @media (min-width: 992px) {
   .bnr-carousel {
@@ -13296,10 +13301,15 @@ html body .tp-bullets.simplebullets.round .bullet {
     .flickity-btn-1 .flickity-prev-next-button .next svg {
       right: -20%; } }
 
-.flickity-btn-1.flickity-btn-hidden .flickity-prev-next-button {
+.flickity-btn-1.flickity-btn-hidden .flickity-page-dots {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
+
+.flickity-btn-1.flickity-btn-hidden .flickity-prev-next-button, .flickity-btn-1.flickity-btn-hidden .flickity-page-dots {
   opacity: 0; }
 
-.flickity-btn-1.flickity-btn-hidden:hover .flickity-prev-next-button {
+.flickity-btn-1.flickity-btn-hidden:hover .flickity-prev-next-button, .flickity-btn-1.flickity-btn-hidden:hover .flickity-page-dots {
   opacity: 1; }
 
 .flickity-page-dots {

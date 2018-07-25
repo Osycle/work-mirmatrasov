@@ -308,7 +308,6 @@
 //--bg--
 
 .bg-texture-1{
-	background: url( "../img/bg/texture-1.jpg" );
 	background-position: 0 10px;
 	background-size: 160px;
 }
@@ -1081,6 +1080,9 @@ body, #page{
 	ul:not([class]){
 		text-align: left;
 	}
+	
+		@extend .list-style-1;
+	
 	.entry-content{
 		@extend .list-style-1;
 		ul{
@@ -1124,6 +1126,9 @@ a[target="_blank"]{
  	//overflow: hidden;
  	& > .container{
  		position: relative;
+ 	}
+ 	li{
+ 		list-style-image: none !important;
  	}
  	@media ( max-width:991px ){
  		overflow: hidden;
@@ -1346,6 +1351,10 @@ a[target="_blank"]{
 				height: 300px;
 			}
 		}
+	}
+	.flickity-page-dots{
+    margin-top: -30px;
+    margin-bottom: 10px;
 	}
 	@media ( min-width:992px ) {
 		padding: 0 35px;
@@ -2106,11 +2115,14 @@ html body{
 
 	}
 	&.flickity-btn-hidden{
-		.flickity-prev-next-button{
+		.flickity-page-dots{
+			transition: all 0.3s ease;
+		}
+		.flickity-prev-next-button, .flickity-page-dots{
 			opacity: 0;
 		}
 		&:hover{
-			.flickity-prev-next-button{
+			.flickity-prev-next-button, .flickity-page-dots{
 				opacity: 1;
 			}
 		}

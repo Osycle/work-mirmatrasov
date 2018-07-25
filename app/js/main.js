@@ -137,7 +137,7 @@
     if( $(".bnr-carousel .carousel-items").length )
       $(".bnr-carousel .carousel-items").flickity({
         imagesLoaded: true,
-        autoPlay: false,
+        autoPlay: 3500,
         pauseAutoPlayOnHover: true,
         arrowShape: arrowStyle,
         initialIndex: 1,
@@ -146,7 +146,7 @@
         prevNextButtons: true,
         draggable: checkSm(),
         wrapAround: true,
-        pageDots: false,
+        pageDots: true,
         contain: false,
         percentPosition: true,
         cellAlign: "center"
