@@ -686,7 +686,7 @@ ul[class*="sub"]{
 	z-index: 100;
 	color: white;
 	box-shadow: 0 0 20px 0 black;
-	background-color: darken($color-1, 5%);
+	background-color: #4B2F48;
 	.wrapper-bg{
 		@extend .fuller;
     background-size: 800px;
@@ -1592,6 +1592,12 @@ a[target="_blank"]{
 	 		transform: translateX(5%);
 	 	}
 	}
+	@media (max-width: 991px) {
+		figure{
+	 		height: 240px;
+	 	}
+	}
+
 }
 
 

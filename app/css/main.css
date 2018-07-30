@@ -12329,7 +12329,7 @@ ul[class*="sub"] {
   color: white;
   -webkit-box-shadow: 0 0 20px 0 black;
   box-shadow: 0 0 20px 0 black;
-  background-color: #0398dc; }
+  background-color: #4B2F48; }
   .min-menu-header .wrapper-bg {
     -webkit-background-size: 800px 800px;
     background-size: 800px;
@@ -12960,6 +12960,10 @@ a[target="_blank"] {
     -webkit-transform: translateX(5%);
     -ms-transform: translateX(5%);
     transform: translateX(5%); } }
+
+@media (max-width: 991px) {
+  .short-galleryvideo figure {
+    height: 240px; } }
 
 /* about */
 .bnr-page {
