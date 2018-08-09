@@ -12352,6 +12352,12 @@ ul[class*="sub"] {
   opacity: 0;
   top: -200px; }
 
+.mm-navbar .mm-listview li:nth-child(5) .mm-next, .mm-navbar .mm-listview li:nth-child(6) .mm-next {
+  padding-left: 100%; }
+
+.mm-navbar .mm-next {
+  padding-left: 100%; }
+
 .mm-navbar .close-btn {
   width: 35px;
   height: 35px; }
@@ -12701,6 +12707,9 @@ a[target="_blank"] {
       display: inline-block; }
     .rev-slider .slide-header .btn-def {
       font-size: 14px; }
+  .rev-slider li {
+    -webkit-border-radius: 25px;
+    border-radius: 25px; }
   @media (min-width: 992px) {
     .rev-slider .slide-header {
       width: 60%; }
@@ -12764,16 +12773,17 @@ a[target="_blank"] {
 
 @media (max-width: 991px) {
   .bnr-carousel .carousel-items figure {
-    height: 300px; } }
+    height: 400px; } }
 
 .bnr-carousel .flickity-page-dots {
-  margin-top: -60px;
   position: relative;
   margin-bottom: 10px; }
 
 @media (min-width: 992px) {
   .bnr-carousel {
-    padding: 0 35px; } }
+    padding: 0 35px; }
+    .bnr-carousel .flickity-page-dots {
+      margin-top: -60px; } }
 
 .fa-star {
   color: #9e9e9e; }
@@ -12850,11 +12860,14 @@ a[target="_blank"] {
   .catalog-items figure .price {
     color: #4d4d4d; }
   .catalog-items figure .img-content {
-    padding: 0 10px;
+    padding: 10px;
     text-align: center; }
     .catalog-items figure .img-content .img {
       width: 100%;
       height: 190px; }
+      .catalog-items figure .img-content .img.bs-contain {
+        -webkit-background-size: cover;
+        background-size: cover; }
   .catalog-items figure .desc-content {
     height: 120px;
     overflow: hidden; }
@@ -12884,6 +12897,12 @@ a[target="_blank"] {
         margin-left: 2.5%;
         margin-right: 2.5%;
         width: 45%; } }
+  @media (max-width: 991px) {
+    .short-about {
+      -webkit-background-size: contain;
+      background-size: contain;
+      text-shadow: 0 0 5px black;
+      background-attachment: inherit; } }
 
 .short-news-last {
   overflow: hidden;
@@ -12911,7 +12930,9 @@ a[target="_blank"] {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    height: 150px; }
+    height: 150px;
+    -webkit-background-size: contain;
+    background-size: contain; }
   .short-news-items figure.bnr .img {
     height: 360px;
     -webkit-filter: brightness(100%);
@@ -12919,6 +12940,9 @@ a[target="_blank"] {
   .short-news-items figure:hover .img {
     -webkit-filter: brightness(110%);
     filter: brightness(110%); }
+  @media (max-width: 991px) {
+    .short-news-items figure .desc-content {
+      height: auto; } }
 
 .short-customers-items figure {
   display: inline-block;
@@ -13113,6 +13137,11 @@ a[target="_blank"] {
     -ms-transform: translateX(-50%);
     transform: translateX(-50%); } }
 
+.article-table.table-content {
+  overflow: hidden; }
+  .article-table.table-content table {
+    min-width: auto; }
+
 /* news */
 .news-items figure {
   overflow: hidden;
@@ -13306,16 +13335,15 @@ html body .tp-bullets.simplebullets.round .bullet {
     .flickity-btn-1 .flickity-prev-next-button .next svg {
       right: -20%; } }
 
-.flickity-btn-1.flickity-btn-hidden .flickity-page-dots {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-
-.flickity-btn-1.flickity-btn-hidden .flickity-prev-next-button, .flickity-btn-1.flickity-btn-hidden .flickity-page-dots {
-  opacity: 0; }
-
-.flickity-btn-1.flickity-btn-hidden:hover .flickity-prev-next-button, .flickity-btn-1.flickity-btn-hidden:hover .flickity-page-dots {
-  opacity: 1; }
+@media (min-width: 992px) {
+  .flickity-btn-1.flickity-btn-hidden .flickity-page-dots {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+  .flickity-btn-1.flickity-btn-hidden .flickity-prev-next-button, .flickity-btn-1.flickity-btn-hidden .flickity-page-dots {
+    opacity: 0; }
+  .flickity-btn-1.flickity-btn-hidden:hover .flickity-prev-next-button, .flickity-btn-1.flickity-btn-hidden:hover .flickity-page-dots {
+    opacity: 1; } }
 
 .flickity-page-dots {
   margin: 30px 0;

@@ -144,7 +144,7 @@
         friction: 1,
         selectedAttraction: 1,
         prevNextButtons: true,
-        draggable: checkSm(),
+        draggable: false,
         wrapAround: true,
         pageDots: true,
         contain: false,
@@ -272,7 +272,7 @@
               //friction: 1,
               //selectedAttraction: 1,
               initialIndex: 1,
-              draggable: true,
+              draggable: !checkSm(),
               contain: true,
               pageDots: !checkSm()
             });

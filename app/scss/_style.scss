@@ -720,6 +720,16 @@ ul[class*="sub"]{
 
 //MMENU
 .mm-navbar{
+	.mm-listview{
+		li:nth-child(5), li:nth-child(6){
+			.mm-next{
+				padding-left: 100%;
+			}
+		}
+	}
+	.mm-next{
+		padding-left: 100%;
+	}
 	.close-btn{
 		width: 35px;
 		height: 35px;
@@ -1198,7 +1208,9 @@ a[target="_blank"]{
 		}
 
 	}
-
+	li{
+		border-radius: 25px;
+	}
 	@media (min-width: 992px) {
 		.slide-header{
 			width: 60%;
@@ -1348,16 +1360,21 @@ a[target="_blank"]{
 		}
 		@media ( max-width: 991px ) {
 			figure{
-				height: 300px;
+				height: 400px;
 			}
 		}
 	}
+	.flickity-btn-1 .flickity-prev-next-button{
+
+	}
 	.flickity-page-dots{
-    margin-top: -60px;
     position: relative;
     margin-bottom: 10px;
 	}
 	@media ( min-width:992px ) {
+		.flickity-page-dots{
+			margin-top: -60px;
+		}
 		padding: 0 35px;
 	}
 }
@@ -1443,11 +1460,14 @@ a[target="_blank"]{
 			color: lighten(black, 30%);
 		}
 		.img-content{
-			padding: 0 10px;
+			padding: 10px;
 			text-align: center;
 			.img{
 				width: 100%;
 				height: 190px;
+				&.bs-contain{
+					background-size: cover;
+				}
 			}
 		}
 		.desc-content{
@@ -1490,6 +1510,11 @@ a[target="_blank"]{
 			@include boxes-items(90, 2);
 		}
 	}
+	@media (max-width: 991px) {
+		background-size: contain;
+		text-shadow: 0 0 5px black;
+		background-attachment: inherit;
+	}
 }
 //short-news
 .short-news-last{
@@ -1524,6 +1549,7 @@ a[target="_blank"]{
 		.img{
 			transition: all 0.3s ease;
 			height: 150px;
+			background-size: contain;
 		}
 		&.bnr{
 			.img{
@@ -1534,6 +1560,11 @@ a[target="_blank"]{
 		&:hover{
 			.img{
 				filter: brightness(110%);
+			}	
+		}
+		@media (max-width:991px) {
+			.desc-content{
+				height: auto;
 			}	
 		}
 	}
@@ -1844,11 +1875,18 @@ a[target="_blank"]{
 		.catalog-filter{
 		}
 	}
+
 }
 
 
 
 
+.article-table.table-content{
+	overflow: hidden;
+	table{
+		min-width: auto ;
+	}
+}
 
 
 
@@ -2122,15 +2160,17 @@ html body{
 
 	}
 	&.flickity-btn-hidden{
-		.flickity-page-dots{
-			transition: all 0.3s ease;
-		}
-		.flickity-prev-next-button, .flickity-page-dots{
-			opacity: 0;
-		}
-		&:hover{
+		@media (min-width:992px ){
+			.flickity-page-dots{
+				transition: all 0.3s ease;
+			}
 			.flickity-prev-next-button, .flickity-page-dots{
-				opacity: 1;
+				opacity: 0;
+			}
+			&:hover{
+				.flickity-prev-next-button, .flickity-page-dots{
+					opacity: 1;
+				}
 			}
 		}
 	}
