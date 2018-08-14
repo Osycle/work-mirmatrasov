@@ -720,13 +720,6 @@ ul[class*="sub"]{
 
 //MMENU
 .mm-navbar{
-	.mm-listview{
-		li:nth-child(5), li:nth-child(6){
-			.mm-next{
-				padding-left: 100%;
-			}
-		}
-	}
 	.mm-next{
 		padding-left: 100%;
 	}
@@ -736,7 +729,11 @@ ul[class*="sub"]{
 	}
 }
 .mm-listview{
-
+	li:nth-child(4), li:nth-child(5){
+		.mm-next{
+			padding-left: 100%;
+		}
+	}
 }
 .mm-slideout{
 	z-index: auto;
@@ -1466,7 +1463,7 @@ a[target="_blank"]{
 				width: 100%;
 				height: 190px;
 				&.bs-contain{
-					background-size: cover;
+					
 				}
 			}
 		}
