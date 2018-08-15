@@ -1330,6 +1330,7 @@ a[target="_blank"]{
 }
 //--slider
 .bnr-carousel{
+	margin-top: 5px;
 	.carousel-items{
 		figure{
 			height: 450px;
@@ -1357,7 +1358,10 @@ a[target="_blank"]{
 		}
 		@media ( max-width: 991px ) {
 			figure{
-				height: 400px;
+				//height: 450px;
+				.img{
+					background-size: contain;
+				}
 			}
 		}
 	}
@@ -1508,9 +1512,18 @@ a[target="_blank"]{
 		}
 	}
 	@media (max-width: 991px) {
-		background-size: contain;
+		//background-size: cover;
+		//.img-content{
+			//filter: blur(3px);
+		//}
 		text-shadow: 0 0 5px black;
 		background-attachment: inherit;
+	}
+	.counter-content{
+		margin: 0 0;
+	}
+	.counter-animate{
+		font-size: 0.9em;
 	}
 }
 //short-news
