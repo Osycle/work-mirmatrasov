@@ -323,7 +323,7 @@
 $header-top-height: 60px; 
 $header-middle-height: 90px; 
 $header-bottom-height: 50px;
-$header-min-menu: 100px;
+$header-min-menu: 70px;
 #header{
 	top: 0;
 	z-index: 110;
@@ -716,7 +716,12 @@ ul[class*="sub"]{
 	}
 }
 
-
+.min-menu-phone{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
 
 //MMENU
 .mm-navbar{
