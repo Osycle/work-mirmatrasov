@@ -13493,13 +13493,13 @@ html body .tp-bullets.simplebullets.round .bullet {
   0% {
     background-position: 0px 0px, 0px 0px, 0px 0px; }
   100% {
-    background-position: 500px 1000px, 400px 400px, 200px 200px; } }
+    background-position: 5000px 10000px, 4000px 4000px, 2000px 2000px; } }
 
 @keyframes snow {
   0% {
     background-position: 0px 0px, 0px 0px, 0px 0px; }
   100% {
-    background-position: 500px 1000px, 400px 400px, 200px 200px; } }
+    background-position: 5000px 10000px, 4000px 4000px, 2000px 2000px; } }
 
 html body {
   padding: 0; }
@@ -13515,8 +13515,8 @@ html body {
   background-size: 15%;
   background-color: transparent;
   background-image: url("http://pve.su/example/sn2.png"), url("http://pve.su/example/sn3.png"), url("http://pve.su/example/sn1.png");
-  -webkit-animation: snow 20s linear infinite;
-  animation: snow 20s linear infinite; }
+  -webkit-animation: snow 200s linear infinite;
+  animation: snow 200s linear infinite; }
   @media (max-width: 991px) {
     .newyear-snow {
       display: none; } }
