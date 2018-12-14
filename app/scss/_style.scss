@@ -355,7 +355,7 @@ header{
 	transform: inherit;transform: unset;
 }
 .header-top-content{
-	background-color: #4B2F48;
+	background-color: $color-6;
 }
 .header-middle-content{
 	border-bottom: 1px solid #d1d1d1;
@@ -686,7 +686,7 @@ ul[class*="sub"]{
 	z-index: 100;
 	color: white;
 	box-shadow: 0 0 20px 0 black;
-	background-color: #4B2F48;
+	background-color: $color-6;
 	.wrapper-bg{
 		@extend .fuller;
     background-size: 800px;
@@ -1694,7 +1694,7 @@ a[target="_blank"]{
 
 /* whywe */
 .whywe{
-	background-color: #4B2F48;
+	background-color: $color-6;
 	@media ( min-width:992px ) {		
 		.text-content{
 			column-count: 2;
@@ -1977,7 +1977,7 @@ a[target="_blank"]{
 #footer{
 	position: relative;
 	color: white;
-	background-color:#4B2F48;
+	background-color:$color-6;
 	min-height: 150px;
 	line-height: 170%;
 	background-repeat: no-repeat;
@@ -2389,8 +2389,156 @@ html body{
 }
 
 
+//Новый год
+@keyframes snow {
+   0% {
+     background-position: 0px 0px, 0px 0px, 0px 0px;
+   }
+   100% {
+     background-position: 500px 1000px, 400px 400px, 200px 200px;
+   }
+ }
+html body{
+	padding: 0;
+			
+}
+.newyear-snow{
+	width: 100vw;
+	height: 100%;
+	z-index: 1;
+	opacity: 0.5;
+	pointer-events: none;
+	position: absolute;
+	background-size: 15%;
+	background-color: transparent;
+  background-image: url('http://pve.su/example/sn2.png'), url('http://pve.su/example/sn3.png'), url('http://pve.su/example/sn1.png');
+  animation: snow 20s linear infinite;
+  @media (max-width: 991px) {
+  	display: none;
+  }
+}
+.newyear-ls{
+	overflow: hidden;
+	main{
+		@media (min-width: 992px) {
+			padding-bottom: 200px;
+		}
+	}
+	&:before, &:after{
+		@extend .claf;
+		background-repeat: repeat-y;
+		background-size: auto;
+		width: 100%;
+		//background-attachment: fixed;
+		pointer-events: none;
+		z-index: 150;
+	}
+	&:before{
+		background-image: url('../img/newyear/garland-right.png');
+		background-position: 100% 0;
+		transform: translateX(80px);
+	}
+	&:after{
+		background-image: url('../img/newyear/garland-left.png');
+		background-position: 0 0;
+		transform: translateX(-80px);
+	}
+	@media (max-width: 991px) {
+		&:after{
+			transform: translateX(-140px);		
+		}
+		&:before{
+			transform: translateX(140px);		
+		}
+
+	}
+
+	.b-page_newyear{	
+		opacity: 1;
+	  z-index: 10;
+
+	  transition: all 0.4s ease;
+	  position: absolute;
+	  width: 100%;
+		@media (max-width: 991px) {
+			top: 30px;
+		}
+	}
+	.b-page_newyear .b-head-decor{
+		height:100px;
+		position: relative;
+	}
+	.b-page__content{
+		min-height: auto;
+		background-color: $color-6;
+		@media (max-width: 991px) {
+			height: auto;
+			background-color: transparent;
+		}
+	}
+	@media (max-width: 991px) {
+		#header{
+			z-index: 1;
+		}
+	}
+	.header-hidden{
+		margin-top: 82px;
+	}
+	.header-top-content{
+		padding-top: 82px;
+	}
+	.header-scroll.scrolled{
+		.header-top-content{
+			padding-top: 0;
+		}
+		.b-page_newyear{
+			@media (min-width: 992px) {
+				transform: translateY(-100%);
+			}
+		}
+	}
 
 
+}
+.footer-newyear{
+	position: relative;
+	z-index: 1;
+	top: -40px;
+	padding-top: 40px;
+	&:before, &:after{
+		@extend .claf;
+		background-repeat: no-repeat;
+		background-size: auto;
+		width: 100%;
+		//background-attachment: fixed;
+		pointer-events: none;
+		transition: all 3.8s ease-out;
+		z-index: 150;
+	}
+	&:before{
+		width: 342px;
+		left: 10%;
+		height: 342px;
+		background-image: url('../img/newyear/tree.svg');
+		transform: translateY(-235px);
+	}
+	&:after{
+		width: 219px;
+		height: 190px;
+		left: inherit;
+		right: -20%;
+		background-image: url('../img/newyear/santa.svg');
+		transform: translateY(-110px);
+	}
+	&.aos-animate{
+		&:after{
+			right: 10%;
+		}
+	}
+	@media (max-width: 991px ){
+		display: none;
+	}
+}
 
 
 

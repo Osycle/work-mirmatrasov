@@ -346,7 +346,8 @@
           percentPosition: true
         });
       }
-
+      $(window).trigger("scroll");
+      $(window).trigger("resize");
     }
 
     //SCROLL
