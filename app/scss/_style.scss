@@ -2411,8 +2411,9 @@ html body{
 	position: absolute;
 	background-size: 15%;
 	background-color: transparent;
+	display: none;
   background-image: url('http://pve.su/example/sn2.png'), url('http://pve.su/example/sn3.png'), url('http://pve.su/example/sn1.png');
-  animation: snow 200s linear infinite;
+  //animation: snow 200s linear infinite;
   @media (max-width: 991px) {
   	display: none;
   }

@@ -13514,9 +13514,8 @@ html body {
   -webkit-background-size: 15% 15%;
   background-size: 15%;
   background-color: transparent;
-  background-image: url("http://pve.su/example/sn2.png"), url("http://pve.su/example/sn3.png"), url("http://pve.su/example/sn1.png");
-  -webkit-animation: snow 200s linear infinite;
-  animation: snow 200s linear infinite; }
+  display: none;
+  background-image: url("http://pve.su/example/sn2.png"), url("http://pve.su/example/sn3.png"), url("http://pve.su/example/sn1.png"); }
   @media (max-width: 991px) {
     .newyear-snow {
       display: none; } }
