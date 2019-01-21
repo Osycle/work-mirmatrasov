@@ -13504,6 +13504,9 @@ html body .tp-bullets.simplebullets.round .bullet {
 html body {
   padding: 0; }
 
+.img-bells {
+  display: none; }
+
 .newyear-snow {
   width: 100vw;
   height: 100%;
